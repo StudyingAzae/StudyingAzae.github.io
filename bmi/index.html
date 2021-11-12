@@ -11,12 +11,23 @@
   }
 </style>
 <script>
-	function fnCalBMI(){
-		var height = $("#height").val();
-		var weight = $("#weight").val();
-		
-		alert( `height + weight` );
-	};
+function fnCalBMI(){
+var height = $("#height").val();
+var weight = $("#weight").val();
+  
+  if (height == "" || height == null){
+  	$("#result").text("신장을 입력해주세요.");
+  }else if (weight == "" || weight == null){
+    $("#result").text("체중을 입력해주세요.");
+  }
+  else{
+    height = height/100;
+    height *= height;
+    var bmi = weight/height;
+    bmi = +(Math.round(bmi + "e+2")  + "e-2");
+    $("#result").text("당신의 비만도(BMI)지수는 " + bmi + " 입니다.");
+  }
+};
 </script>
 <html lang="ko" style="overflow: visible;">
   <head>
@@ -56,5 +67,11 @@
 			</p>
 		</div>
 	</div>
+<p data-ke-size="size16">&nbsp;</p>
+<div><span> <b id="result">비만도를 계산해보세요.</b> </span></div>
+<div>&nbsp;</div>
+<div><span><b></b></span><hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style8" />
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
   </body>
 </html>
