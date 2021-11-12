@@ -1,0 +1,48 @@
+<style>
+  .calBtn{
+    width:100px;
+	margin:auto;
+	display:block;
+    background:#f68b1f;
+    color:white;
+  }
+  
+  .tbody tr{
+  	margin-top:5px; 
+  }
+</style>
+<script>
+function fnCalBMI(){
+var height = $("#height").val();
+var weight = $("#weight").val();
+  
+  if (height == "" || height == null){
+  	$("#result").text("신장을 입력해주세요.");
+  }else if (weight == "" || weight == null){
+    $("#result").text("체중을 입력해주세요.");
+  }
+  else{
+    height = height/100;
+    height *= height;
+    var bmi = weight/height;
+    $("#result").text(bmi);
+  }
+};
+</script>
+<div class="sBox">
+<table data-ke-align="alignLeft"><colgroup> <col width="30%" /> <col width="*" /> <col width="10%" /> </colgroup>
+<tbody class="tbody">
+<tr>
+<th>신장</th>
+<th><input id="height" type="number" />cm</th>
+</tr>
+<tr>
+<th>체중</th>
+<th><input id="weight" type="number" />kg</th>
+</tr>
+</tbody>
+</table>
+</div>
+<div><input class="calBtn" type="button" value="계산하기" onclick="javascript:fnCalBMI()" /></div>
+<p data-ke-size="size16">&nbsp;</p>
+<div><b id="result">0</b></div>
