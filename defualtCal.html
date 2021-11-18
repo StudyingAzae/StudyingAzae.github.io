@@ -1,0 +1,70 @@
+<style>
+  .calBtn{
+	width:100px;
+	margin:auto;
+	display:block;
+  }
+</style>
+<script>
+function fnCalCircle(){
+var rr = $("#rr").val();
+var height = $("#height").val();
+  if (rr == "" || rr == null){
+  	$("#result").text("반지름을 입력해주세요.");
+    $("#result2").text("");
+  }else if (rr <= 0){
+    $("#result").text("반지름은 0보다 커야합니다.");
+    $("#result2").text("");
+  }else if (height == "" || height == null){
+  	$("#result").text("높이를 입력해주세요.");
+    $("#result2").text("");
+  }else if (height <= 0){
+    $("#result").text("높이는 0보다 커야합니다.");
+    $("#result2").text("");
+  }
+  else{
+	var circle = 2 * rr * rr;
+    var pai = circle * 3.14;
+    pai = +(Math.round(pai+"e+2")+"e-2");
+	
+	var square = 2 * rr * height;
+	var pai2 = square * 3.14;
+	pai2 = +(Math.round(pai2+"e+2")+"e-2");
+    
+    $("#result").text("반지름 " + rr + ", 높이 " + height + "의 원기둥의 겉넓이는 " + (circle+square) + "π 입니다.");
+    $("#result2").text("π= 3.14로 계산 시 부피는 " + (pai+pai2) + "cm² 입니다. (소수점 2자리 반올림)");
+  }
+};
+</script>
+
+
+
+<p data-ke-size="size16">&nbsp;</p>
+<blockquote data-ke-style="style3"><span style="color: #666666;">원기둥의 겉넓이 공식은 <b>원 2개의 넓이 + 기둥을 펼친 사각형의 넓이</b>입니다. 즉, <b>2 &times; 반지름(r) &times; 반지름(r) &times; 파이(&pi;) + 2 &times; 반지름(r) &times; 파이(&pi;) &times; 높이(h)</b> 입니다. 요약하면 <b>2&pi;r² + 2&pi;rh</b>입니다. 자세한 설명을 아래를 참고하세요. 아래 계산기에 반지름과 높이를 입력하면 계산된 값이 나옵니다.</span></blockquote>
+<p data-ke-size="size16">&nbsp;</p>
+<p data-ke-size="size16">&nbsp;</p>
+<div class="sBox"><br /><span><b>원기둥의 반지름과 높이를 입력하세요.</b></span><br /><br />
+<table data-ke-align="alignLeft">
+<tbody>
+<tr>
+<th>반지름</th>
+<th><input id="rr" style="margin: 10px;" type="number" />cm</th>
+</tr>
+<tr>
+<th>높이</th>
+<th><input id="height" style="margin: 10px;" type="number" />cm</th>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="calBtn"><input type="button" value="계산하기" onClick="javascript:fnCalCircle()"  /></div>
+<p data-ke-size="size16">&nbsp;</p>
+<div><span> <b id="result"></b> </span></div>
+<p data-ke-size="size16">&nbsp;</p>
+<div><span> <b id="result2"></b> </span></div>
+<p data-ke-size="size16">&nbsp;</p>
+<div><span><b></b></span><hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style8" />
+<p data-ke-size="size16">&nbsp;</p>
+</div>
+<blockquote data-ke-style="style1"><span style="font-family: 'Noto Serif KR';">계산기는 검산용으로 사용하시고 직접 풀어보세요.<br /><br /></span></blockquote>
+<p data-ke-size="size16">&nbsp;</p>
