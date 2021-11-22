@@ -13,27 +13,8 @@
 
 <script>
 function fnPostAct(){
-	$.ajax({
-		type: "GET",
-		url: "http://openapi.epost.go.kr/postal/retrieveNewAdressAreaCdService/retrieveNewAdressAreaCdService/getNewAddressListAreaCd", 
-		dataType: "xml",
-		data : {
-			  //ServiceKey:"iwsayYw05I0NW9quruxeKKdnJvsFvTSwwya4G5NcZyx%2Fg726pPlppgYL3yFT6CIzSKTVGkdL%2FXban0o0RWk%2Fjg%3D%3D"
-			  ServiceKey:"iwsayYw05I0NW9quruxeKKdnJvsFvTSwwya4G5NcZyx/g726pPlppgYL3yFT6CIzSKTVGkdL/Xban0o0RWk/jg=="
-			, searchSe:"road"
-			, srchwrd:$("#addr").val()
-		},
-		success: function(result){
-			if ("OK" == jQuery(result).find("STATUS").text()){
-				$("#result").text("성공");
-			}else{
-				$("#result").text("실패");
-			}
-		},
-		error: function(result){
-			$("#result").text("에러");
-		}
-	});
+	var url = "http://openapi.epost.go.kr/postal/retrieveNewAdressAreaCdService/retrieveNewAdressAreaCdService/getNewAddressListAreaCd";
+	document.getElementById("frm").attr("action", url).submit();
 }
 </script>
 <html lang="ko" style="overflow: visible;">
@@ -45,6 +26,11 @@ function fnPostAct(){
   </head>
   <body style="overflow:visible;">
 	<div id="wrapper">
+		<form id="frm" method="GET">
+			<input type="hidden" id="ServiceKey" value="iwsayYw05I0NW9quruxeKKdnJvsFvTSwwya4G5NcZyx/g726pPlppgYL3yFT6CIzSKTVGkdL/Xban0o0RWk/jg==">
+			<input type="hidden" id="searchSe" value="road">
+			<input type="hidden" id="srchwrd" value="보광동">
+		</form>
 		<input id="addr" type="text" />
 		<div class="calBtn"><input type="button" value="조회하기" onClick="javascript:fnPostAct();"  /></div>
 		<p data-ke-size="size16">&nbsp;</p>
