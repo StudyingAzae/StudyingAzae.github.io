@@ -17,9 +17,9 @@ function fnPostAct(){
 	form.action = "http://openapi.epost.go.kr/postal/retrieveNewAdressAreaCdService/retrieveNewAdressAreaCdService/getNewAddressListAreaCd";
 	form.method = "GET";
 	
-	form.innerHTML = "<input name='ServiceKey' value='iwsayYw05I0NW9quruxeKKdnJvsFvTSwwya4G5NcZyx%2Fg726pPlppgYL3yFT6CIzSKTVGkdL%2FXban0o0RWk%2Fjg%3D%3D'>";
-	form.innerHTML += "<input name='searchSe' value='road'>";
-	form.innerHTML += "<input name='srchwrd' value='세종로 17'>";
+	form.innerHTML = "<input type='hidden' name='ServiceKey' value='iwsayYw05I0NW9quruxeKKdnJvsFvTSwwya4G5NcZyx/g726pPlppgYL3yFT6CIzSKTVGkdL/Xban0o0RWk/jg=='>";
+	form.innerHTML += "<input type='hidden' name='searchSe' value='road'>";
+	form.innerHTML += "<input type='hidden' name='srchwrd' value='세종로 17'>";
 	
 	document.body.append(form);
 	
