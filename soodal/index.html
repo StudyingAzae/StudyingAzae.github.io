@@ -13,8 +13,10 @@
 
 <script>
 function fnPostAct(){
+	var form = document.getElementById("frm");
 	var url = "http://openapi.epost.go.kr/postal/retrieveNewAdressAreaCdService/retrieveNewAdressAreaCdService/getNewAddressListAreaCd";
-	document.getElementById("frm").attr("action", url).submit();
+	form.action = url;
+	form.submit();
 }
 </script>
 <html lang="ko" style="overflow: visible;">
