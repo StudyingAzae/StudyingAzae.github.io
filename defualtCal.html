@@ -25,13 +25,14 @@ var height = $("#height").val();
   else{
 	var circle = 2 * rr * rr;
     var pai = circle * 3.14;
+	circle = +(Math.round(circle+"e+2")+"e-2");
     pai = +(Math.round(pai+"e+2")+"e-2");
 	
 	var square = 2 * rr * height;
 	var pai2 = square * 3.14;
 	pai2 = +(Math.round(pai2+"e+2")+"e-2");
     
-    $("#result").text("반지름 " + rr + ", 높이 " + height + "의 원기둥의 겉넓이는 " + (circle+square) + "π 입니다.");
+    $("#result").text("반지름 " + rr + ", 높이 " + height + "의 원기둥의 겉넓이는 " + (circle+square) + "π 입니다. (소수점 2자리 반올림)");
     $("#result2").text("π= 3.14로 계산 시 부피는 " + (pai+pai2) + "cm² 입니다. (소수점 2자리 반올림)");
   }
 };
@@ -68,3 +69,10 @@ var height = $("#height").val();
 </div>
 <blockquote data-ke-style="style1"><span style="font-family: 'Noto Serif KR';">계산기는 검산용으로 사용하시고 직접 풀어보세요.<br /><br /></span></blockquote>
 <p data-ke-size="size16">&nbsp;</p>
+
+
+
+
+
+
+
