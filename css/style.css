@@ -31,8 +31,12 @@ button {
   border: 1px solid;
 }
 
-.basic-table th{
-   background-color: teal; color:white;
+.basic-table th {
+  font-size: 11px;
+  background-color: teal; color:white;
+}
+.basic-table td {
+  font-size: 10px;
 }
 
 /* 버튼 */
