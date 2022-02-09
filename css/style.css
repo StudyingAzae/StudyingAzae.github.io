@@ -31,7 +31,7 @@ button {
 }
 
 /* 버튼 */
-.btn_search {
+.btn-search {
     position: relative;
     border: none;
     min-width: 200px;
@@ -49,11 +49,11 @@ button {
     transition: 0.3s;
 }
 
-.btn_search:hover {
+.btn-search:hover {
     transform: scale(1.2);
 }
 
-.btn_search:hover::after {
+.btn-search:hover::after {
     content: "";
     width: 30px;
     height: 30px;
@@ -68,7 +68,7 @@ button {
 }
 
 /* INPUT */
-.input{
+.input-search{
   padding: 7px;
   font-size: 14px;
   text-align: left;
@@ -77,6 +77,6 @@ button {
   -moz-box-sizing: border-box;
 }
 
-.input:hover, input:focus{
+.input-search:hover, input:focus{
   background:#ffffff;
 }
