@@ -11,6 +11,11 @@ body {
     display: table-cell;
 }
 
+.wrapper {
+  position: relative;
+  display: inline-block; 
+}
+
 button {
     margin: 20px;
 }
