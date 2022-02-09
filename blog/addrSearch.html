@@ -40,10 +40,10 @@ function makeListJson(jsonStr){
 	var htmlStr = "";
 	htmlStr += "<table class='basic-table'>";
 	htmlStr += "<tr>";
-		htmlStr += "<td>우편번호</td>";	
-		htmlStr += "<td>지번주소</td>";
-		htmlStr += "<td>도로명주소</td>";
-		htmlStr += "<td>영문주소</td>";
+		htmlStr += "<th>우편번호</th>";	
+		htmlStr += "<th>지번주소</th>";
+		htmlStr += "<th>도로명주소</th>";
+		htmlStr += "<th>영문주소</th>";
 		htmlStr += "</tr>";
 	
 	$(jsonStr.results.juso).each(function(){
