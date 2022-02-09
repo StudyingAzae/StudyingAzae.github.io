@@ -79,6 +79,7 @@ button {
 
 /* INPUT */
 .input-search{
+  width: 200px;
   padding: 7px;
   font-size: 14px;
   text-align: left;
