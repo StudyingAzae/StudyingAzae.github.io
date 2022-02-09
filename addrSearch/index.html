@@ -14,7 +14,7 @@
 <script>
 function fnPostAct(){
 	var form = document.getElementById("frm");
-	var url = "http://openapi.epost.go.kr/postal/retrieveNewAdressAreaCdService/retrieveNewAdressAreaCdService/getNewAddressListAreaCd?ServiceKey=iwsayYw05I0NW9quruxeKKdnJvsFvTSwwya4G5NcZyx/g726pPlppgYL3yFT6CIzSKTVGkdL/Xban0o0RWk/jg==&searchSe=road&srchwrd=보광동";
+	var url = "https://www.juso.go.kr/addrlink/addrLinkApi.do";
 	form.action = url;
 	form.submit();
 }
@@ -24,14 +24,15 @@ function fnPostAct(){
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-sidth, initial-scale=1, user-scalable=no">
       <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>BMI</title>
+    <title>ADDR</title>
   </head>
   <body style="overflow:visible;">
 	<div id="wrapper">
-		<form id="frm" method="GET">
-			<input type="hidden" id="ServiceKey" value="iwsayYw05I0NW9quruxeKKdnJvsFvTSwwya4G5NcZyx/g726pPlppgYL3yFT6CIzSKTVGkdL/Xban0o0RWk/jg==">
-			<input type="hidden" id="searchSe" value="road">
-			<input type="hidden" id="srchwrd" value="보광동">
+		<form id="frm" method="POST">
+			<input type="hidden" id="confmKey" value="devU01TX0FVVEgyMDIyMDIwOTE0NTAzMjExMjIyNDE">
+			<input type="hidden" id="currentPage" value="1">
+			<input type="hidden" id="countPerPage" value="10">
+			<input type="hidden" id="keyword" value="보광동">
 		</form>
 		<input id="addr" type="text" />
 		<div class="calBtn"><input type="button" value="조회하기" onClick="javascript:fnPostAct();"  /></div>
