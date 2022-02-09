@@ -16,7 +16,6 @@ button {
 }
 
 /* 테이블 */
-
 .basic-table {
   border-collapse: collapse;
   border: 2px solid;
@@ -32,7 +31,6 @@ button {
 }
 
 /* 버튼 */
-
 .btn_search {
     position: relative;
     border: none;
@@ -69,4 +67,16 @@ button {
     animation: ring 1.5s infinite;
 }
 
+/* INPUT */
+.input{
+  padding: 7px;
+  font-size: 14px;
+  text-align: left;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
 
+.input:hover, input:focus{
+  background:#ffffff;
+}
