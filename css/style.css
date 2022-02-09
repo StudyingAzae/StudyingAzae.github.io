@@ -1,7 +1,7 @@
 /* typography */
 
 html {
-  
+  font-family: "Malgun Gothic";
 }
 
 body {
@@ -14,10 +14,7 @@ body {
 .wrapper {
   position: relative;
   display: inline-block; 
-}
-
-button {
-    margin: 20px;
+  width: 800px;
 }
 
 /* 테이블 */
@@ -32,14 +29,17 @@ button {
 }
 
 .basic-table th {
-  font-size: 11px;
+  font-size: 14px;
   background-color: teal; color:white;
 }
 .basic-table td {
-  font-size: 10px;
+  font-size: 13px;
 }
 
 /* 버튼 */
+
+
+/* 애니메이션 */
 .btn-search {
     position: relative;
     border: none;
@@ -73,13 +73,11 @@ button {
     z-index: -1;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    animation: ring 1.5s infinite;
 }
 
 /* INPUT */
 .input-search{
-  width: 350px;
+  width: 300px;
   padding: 7px;
   font-size: 14px;
   text-align: left;
@@ -97,46 +95,3 @@ button {
   margin-top: 20px; 
 }
 
-
-/* 애니메이션 */
-.w-btn-gra-anim {
-    background-size: 400% 400%;
-    animation: gradient1 5s ease infinite;
-}
-
-@keyframes gradient1 {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@keyframes gradient2 {
-    0% {
-        background-position: 100% 50%;
-    }
-    50% {
-        background-position: 0% 50%;
-    }
-    100% {
-        background-position: 100% 50%;
-    }
-}
-
-@keyframes ring {
-    0% {
-        width: 30px;
-        height: 30px;
-        opacity: 1;
-    }
-    100% {
-        width: 300px;
-        height: 300px;
-        opacity: 0;
-    }
-}
