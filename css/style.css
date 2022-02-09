@@ -81,3 +81,7 @@ button {
 .input-search:hover, input:focus{
   background:#ffffff;
 }
+
+.list-search {
+  margin: 20px; 
+}
