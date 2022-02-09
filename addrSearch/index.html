@@ -38,7 +38,7 @@ function getAddr(){
 
 function makeListJson(jsonStr){
 	var htmlStr = "";
-	htmlStr += "<table>";
+	htmlStr += "<table class='tbl'>";
 	$(jsonStr.results.juso).each(function(){
 		htmlStr += "<tr>";
 		htmlStr += "<td>"+this.roadAddr+"</td>";
