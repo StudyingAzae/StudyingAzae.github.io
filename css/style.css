@@ -33,7 +33,7 @@ button {
 
 /* 버튼 */
 
-.w-btn-neon2 {
+.btn_search {
     position: relative;
     border: none;
     min-width: 200px;
@@ -51,11 +51,11 @@ button {
     transition: 0.3s;
 }
 
-.w-btn-neon2:hover {
+.btn_search:hover {
     transform: scale(1.2);
 }
 
-.w-btn-neon2:hover::after {
+.btn_search:hover::after {
     content: "";
     width: 30px;
     height: 30px;
