@@ -126,6 +126,7 @@ function enterSearch() {
 <title>Insert title here</title>
 </head>
 <body>
+<div class="wrapper">
 <form name="form" id="form" method="post">
 	<input type="hidden" name="currentPage" value="1"/> <!-- 요청 변수 설정 (현재 페이지. currentPage : n > 0) -->
 	<input type="hidden" name="countPerPage" value="10"/><!-- 요청 변수 설정 (페이지당 출력 개수. countPerPage 범위 : 0 < n <= 100) -->
@@ -135,5 +136,6 @@ function enterSearch() {
 	<input type="button" onClick="getAddr();" value="주소검색하기" class="btn-search"/>
 	<div id="list" class="list-search"></div><!-- 검색 결과 리스트 출력 영역 -->
 </form>
+</div>
 </body>
 </html>
