@@ -38,7 +38,7 @@ function getAddr(){
 
 function makeListJson(jsonStr){
 	var htmlStr = "";
-	htmlStr += "<table class='tbl'>";
+	htmlStr += "<table class='basic-table'>";
 	htmlStr += "<tr>";
 		htmlStr += "<td>우편번호</td>";	
 		htmlStr += "<td>지번주소</td>";
@@ -132,7 +132,7 @@ function enterSearch() {
 	<input type="hidden" name="resultType" value="json"/> <!-- 요청 변수 설정 (검색결과형식 설정, json) --> 
 	<input type="hidden" name="confmKey" value="devU01TX0FVVEgyMDIyMDIwOTE0NTAzMjExMjIyNDE="/><!-- 요청 변수 설정 (승인키) -->
 	<input type="text" name="keyword" value="" onkeydown="enterSearch();"/><!-- 요청 변수 설정 (키워드) -->
-	<input type="button" onClick="getAddr();" value="주소검색하기"/>
+	<input type="button" onClick="getAddr();" value="주소검색하기" class="w-btn-neon2"/>
 	<div id="list" ></div><!-- 검색 결과 리스트 출력 영역 -->
 </form>
 </body>
