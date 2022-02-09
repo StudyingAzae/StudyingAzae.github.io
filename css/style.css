@@ -11,6 +11,11 @@ table {
   border: 2px solid black;
 }
 
+.tbl{
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
 th, td {
   padding: 20px;
 }
