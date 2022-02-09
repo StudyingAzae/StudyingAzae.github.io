@@ -39,19 +39,26 @@ function getAddr(){
 function makeListJson(jsonStr){
 	var htmlStr = "";
 	htmlStr += "<table class='tbl'>";
+	htmlStr += "<tr>";
+		htmlStr += "<td>우편번호</td>";	
+		htmlStr += "<td>지번주소</td>";
+		htmlStr += "<td>도로명주소</td>";
+		htmlStr += "<td>영문주소</td>";
+		htmlStr += "</tr>";
+	
 	$(jsonStr.results.juso).each(function(){
 		htmlStr += "<tr>";
+		htmlStr += "<td>"+this.zipNo+"</td>";
+		htmlStr += "<td>"+this.jibunAddr+"</td>";
 		htmlStr += "<td>"+this.roadAddr+"</td>";
+		htmlStr += "<td>"+this.engAddr+"</td>";
+		/** 안씀 
 		htmlStr += "<td>"+this.roadAddrPart1+"</td>";
 		htmlStr += "<td>"+this.roadAddrPart2+"</td>";
-		htmlStr += "<td>"+this.jibunAddr+"</td>";
-		htmlStr += "<td>"+this.engAddr+"</td>";
-		htmlStr += "<td>"+this.zipNo+"</td>";
 		htmlStr += "<td>"+this.admCd+"</td>";
 		htmlStr += "<td>"+this.rnMgtSn+"</td>";
 		htmlStr += "<td>"+this.bdMgtSn+"</td>";
 		htmlStr += "<td>"+this.detBdNmList+"</td>";
-		/** API 서비스 제공항목 확대 (2017.02) **/
 		htmlStr += "<td>"+this.bdNm+"</td>";
 		htmlStr += "<td>"+this.bdKdcd+"</td>";
 		htmlStr += "<td>"+this.siNm+"</td>";
@@ -66,10 +73,10 @@ function makeListJson(jsonStr){
 		htmlStr += "<td>"+this.lnbrMnnm+"</td>";
 		htmlStr += "<td>"+this.lnbrSlno+"</td>";
 		htmlStr += "<td>"+this.emdNo+"</td>";
-		/** API 서비스 제공항목 확대 (2020.12) **/
 		htmlStr += "<td>"+this.hstryYn+"</td>";
 		htmlStr += "<td>"+this.relJibun+"</td>";
 		htmlStr += "<td>"+this.hemdNm+"</td>";
+		**/
 		htmlStr += "</tr>";
 	});
 	htmlStr += "</table>";
