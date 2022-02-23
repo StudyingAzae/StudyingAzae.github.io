@@ -6,3 +6,4 @@ function isNull(str){
   
   return true;
 }
+
