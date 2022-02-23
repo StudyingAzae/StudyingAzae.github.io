@@ -22,10 +22,15 @@ $(function(){
 	
 	
 function keywordSearch(){
+	var keyword = $('keyword').value();
+	if(keyword == null || keyword == "" || keyword == "undefined"){
+		window.alert("키워드를 입력해주세요.");
+		return;
+	}
+	
 	// 장소 검색 객체를 생성합니다
 	var ps = new kakao.maps.services.Places(); 
 	
-	var keyword = $('keyword').value();
 	// 키워드로 장소를 검색합니다
 	ps.keywordSearch(keyword, placesSearchCB); 
 }
