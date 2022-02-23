@@ -4,7 +4,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/JavaScript" src="/lib/jquery-3.6.0.min.js" ></script>
+<script type="text/JavaScript" src="/lib/jquery-3.6.0.min.js"></script>
+<script type="text/JavaScript" src="/js/com.js"></script>
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ae6366b717d287a36c17836dca0424b1&libraries=services"></script>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 
@@ -23,7 +24,7 @@ $(function(){
 	
 function keywordSearch(){
 	var keyword = $('keyword').val();
-	if(keyword == null || keyword == "" || keyword == "undefined"){
+	if(com.isNull(keyword)){
 		window.alert("키워드를 입력해주세요.");
 		return;
 	}
