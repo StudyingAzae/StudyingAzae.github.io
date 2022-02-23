@@ -26,8 +26,10 @@ $(function(){
 function keywordSearch(){
 	var keyword = $("#keyword").val();
 	if(isNull(keyword)){
-		window.alert("키워드를 입력해주세요.");
-		return;
+		window.alert("키워드를 입력해주세요.", function(){
+			return;	
+		});
+		
 	}
 	
 	// 장소 검색 객체를 생성합니다
