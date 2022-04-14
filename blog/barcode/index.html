@@ -20,7 +20,7 @@ function makeBarcode() {
   
     if (keyword == null || keyword == ""){
       keyword = "9902204005700558990";
-      $('keyword').val(keyword);
+      $('#keyword').val(keyword);
     }
   
     $("#bcTarget").barcode(keyword, type);   
