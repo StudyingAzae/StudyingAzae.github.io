@@ -102,10 +102,7 @@ body {
 }
 
 .barcodeImg {
-  margin-top: 50px; 
-  vertical-align: middle;
-  height:250px;
-  display: table-cell;
+  margin:50px auto; 
 }
 
 @media ( max-width: 1000px ){
