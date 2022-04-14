@@ -15,14 +15,12 @@ $(function(){
 });  
   
 function makeBarcode() {
-    console.log ("start");
     var keyword = document.form.keyword.value;
     if (keyword == null || keyword == ""){
       keyword = "9902204005700558990";
     }
   
     $("#bcTarget").barcode(keyword, "code128");   
-    console.log ("end");
 }
 
 </script>
@@ -35,7 +33,7 @@ function makeBarcode() {
     <input type="button" onClick="makeBarcode();" value="바코드 생성" class="btn-search"/>
   </form>
   
-  <div id="bcTarget"></div>  
+  <div id="bcTarget" class="list-search"></div>  
 </div>
 </body>
 </html>
