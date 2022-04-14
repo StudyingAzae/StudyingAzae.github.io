@@ -104,6 +104,8 @@ body {
 .barcodeImg {
   margin-top: 50px; 
   vertical-align: middle;
+  height:250px;
+  display: table-cell;
 }
 
 @media ( max-width: 1000px ){
