@@ -16,11 +16,13 @@ $(function(){
   
 function makeBarcode() {
     var keyword = document.form.keyword.value;
+    var type = $('#type option:selected').val();
+  
     if (keyword == null || keyword == ""){
       keyword = "9902204005700558990";
     }
   
-    $("#bcTarget").barcode(keyword, "code128");   
+    $("#bcTarget").barcode(keyword, type);   
 }
 
 </script>
@@ -29,6 +31,18 @@ function makeBarcode() {
 <body>
 <div class="wrapper">
   <form name="form" id="form" method="post">
+    <select id="type">
+      <option value="codebar">codebar</option>
+      <option value="code11">code11</option>
+      <option value="code39">code39</option>
+      <option selected="selected" value="code128">code128</option>
+      <option value="ean8">ean8</option>
+      <option value="ean13">ean13</option>
+      <option value="std25">std25</option>
+      <option value="int25">int25</option>
+      <option value="msi">msi</option>
+      <option value="datamatrix">datamatrix</option>
+    </select>
     <input type="text" name="keyword" value="" class="input-search"/>
     <input type="button" onClick="makeBarcode();" value="바코드 생성" class="btn-search"/>
   </form>
