@@ -30,8 +30,7 @@ function makeBarcode() {
 </head>
 <body>
 <div class="wrapper">
-  <form name="form" id="form" method="post">
-    <select id="type">
+  <select id="type" class="front-selectbox" >
       <option value="codabar">codabar</option>
       <option value="code11">code11</option>
       <option value="code39">code39</option>
@@ -43,6 +42,7 @@ function makeBarcode() {
       <option value="msi">msi</option>
       <option value="datamatrix">datamatrix</option>
     </select>
+  <form name="form" id="form" method="post">
     <input type="text" name="keyword" value="" class="input-search"/>
     <input type="button" onClick="makeBarcode();" value="바코드 생성" class="btn-search"/>
   </form>
