@@ -12,7 +12,10 @@
 
 <script language="javascript">
 $(function(){
-  
+  $('#keyword').onkeyup(function(){
+    let key = window.event.keyCdoe;
+    console.log(key);
+  });
 });  
   
 function makeQRcode() {
