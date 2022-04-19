@@ -19,12 +19,12 @@ function makeQRcode() {
     let type = $('#type option:selected').val();
   
     if (keyword == null || keyword == ""){
-      window.alert("input keyword");
+      alert("input keyword");
       return;
     }
     
     jQuery("#qrcode").qrcode({   //qrcode 시작
-        render : type,       //table, canvas 형식 두 종류가 있다. 
+        render : type,          //table, canvas 형식 두 종류가 있다. 
         width : 100,            //넓이 조절
         height : 100,           //높이 조절
         text   : keyword        //QR코드에 실릴 문자열
@@ -43,7 +43,7 @@ function makeQRcode() {
   </select>
   <form name="form" id="form" method="post">
     <input type="text" name="keyword" id="keyword" value="" class="input-search"/>
-    <input type="button" onClick="makeBarcode();" value="QR코드 생성" class="btn-search"/>
+    <input type="button" onClick="makeQRcode();" value="QR코드 생성" class="btn-search"/>
   </form>
   
  <div id="qrcode"></div>
