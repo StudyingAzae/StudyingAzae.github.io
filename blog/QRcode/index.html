@@ -12,9 +12,9 @@
 
 <script language="javascript">
 $(function(){
-  $('#keyword').keyup(function(e){
-    if( e.keyCode == 13 ){
-      e.preventDefault(); 
+  $('#keyword').keyup(function(){
+    if( event.keyCode == 13 ){
+      event.preventDefault(); 
     }
   });
 });  
