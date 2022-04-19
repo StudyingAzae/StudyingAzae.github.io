@@ -31,7 +31,6 @@ function makeQRcode() {
         height : 256,           //높이 조절
         text   : keyword        //QR코드에 실릴 문자열
     });
-
 }
 
 </script>
@@ -44,7 +43,7 @@ function makeQRcode() {
       <option value="table">table</option>
   </select>
   <form name="form" id="form" method="post">
-    <input type="text" name="keyword" id="keyword" value="" class="input-search" placeholder="ex) StudyingAzae.tistory.com"/>
+    <input type="text" name="keyword" id="keyword" value="" class="input-search" placeholder="ex) StudyingAzae.tistory.com" onkeyup="enterkey()"/>
     <input type="button" onClick="makeQRcode();" value="QR코드 생성" class="btn-search"/>
   </form>
   
