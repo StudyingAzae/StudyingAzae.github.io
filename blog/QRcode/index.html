@@ -23,7 +23,8 @@ function makeQRcode() {
       window.alert("input keyword");
       return;
     }
-    
+  
+    $("#bcTarget").init();
     jQuery("#qrcode").qrcode({   //qrcode 시작
         render : type,          //table, canvas 형식 두 종류가 있다. 
         width : 256,            //넓이 조절
