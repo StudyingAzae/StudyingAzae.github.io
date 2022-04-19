@@ -12,6 +12,12 @@
 
 <script language="javascript">
 $(function(){
+  $('#keyword').keyup((e){
+    console.log(e.keyCode);                  
+    if ( e.keyCode == 13 ){
+       makeQRcode();  
+    }
+  };
 });  
   
 function makeQRcode() {
@@ -42,7 +48,7 @@ function makeQRcode() {
       <option value="table">table</option>
   </select>
   <div>
-    <input type="text" name="keyword" id="keyword" value="" class="input-search" placeholder="ex) StudyingAzae.tistory.com""/>
+    <input type="text" name="keyword" id="keyword" value="" class="input-search" placeholder="ex) StudyingAzae.tistory.com"/>
     <input type="button" onClick="makeQRcode();" value="QR코드 생성" class="btn-search"/>
   </div>
   
