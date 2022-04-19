@@ -79,7 +79,7 @@
     function pageMove(){
       let url = $('#outputData').val();
       if (url == "" || url == null || url == "No QR code detected."){
-        window.alert("url is invalid.");
+        window.alert(url + " is invalid.");
       }
       location.href = url; 
     };
