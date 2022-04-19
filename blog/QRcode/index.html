@@ -12,12 +12,6 @@
 
 <script language="javascript">
 $(function(){
-  $('#keyword').keyup(function(e){
-    window.alert(e.keyCode);
-    if( e.keyCode == 13 ){
-      e.preventDefault(); 
-    }
-  });
 });  
   
 function makeQRcode() {
@@ -47,10 +41,10 @@ function makeQRcode() {
       <option selected="selected"  value="canvas">canvas (default)</option>  
       <option value="table">table</option>
   </select>
-  <form name="form" id="form" method="post">
+  <div>
     <input type="text" name="keyword" id="keyword" value="" class="input-search" placeholder="ex) StudyingAzae.tistory.com""/>
     <input type="button" onClick="makeQRcode();" value="QR코드 생성" class="btn-search"/>
-  </form>
+  </div>
   
  <div id="qrcode" class="barcodeImg"></div>
   
