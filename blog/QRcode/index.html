@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/JavaScript" src="/lib/jquery-3.6.0.min.js"></script>
 <script type="text/JavaScript" src="/lib/jquery.qrcode.js"></script>
+  <script type="text/JavaScript" src="/lib/qrcode.js"></script>
 <script type="text/JavaScript" src="/js/com.js"></script>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 
@@ -25,8 +26,8 @@ function makeQRcode() {
     
     jQuery("#qrcode").qrcode({   //qrcode 시작
         render : type,          //table, canvas 형식 두 종류가 있다. 
-        width : 100,            //넓이 조절
-        height : 100,           //높이 조절
+        width : 256,            //넓이 조절
+        height : 256,           //높이 조절
         text   : keyword        //QR코드에 실릴 문자열
     });
 
@@ -38,8 +39,8 @@ function makeQRcode() {
 <body>
 <div class="wrapper">
   <select id="type" class="front-selectbox" >
-      <option selected="selected"  value="table">table (default)</option>  
-      <option value="canvas">canvas</option>
+      <option selected="selected"  value="canvas">canvas (default)</option>  
+      <option value="table">table</option>
   </select>
   <form name="form" id="form" method="post">
     <input type="text" name="keyword" id="keyword" value="" class="input-search"/>
