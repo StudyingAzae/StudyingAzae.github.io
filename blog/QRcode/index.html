@@ -12,8 +12,8 @@
 
 <script language="javascript">
 $(function(){
-  $('#keyword').keyup(function(){
-    let key = window.event.keyCdoe;
+  $('#keyword').keyup(function(e){
+    let key = e.keyCode;
     console.log(key);
   });
 });  
