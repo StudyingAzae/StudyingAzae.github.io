@@ -24,6 +24,7 @@ function makeBarcode() {
   
     if (keyword == null || keyword == ""){
       window.alert("barcode is null");
+      return;
     }
   
     $("#bcTarget").barcode(keyword, type);   
