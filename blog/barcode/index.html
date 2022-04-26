@@ -11,27 +11,6 @@
 
 <script language="javascript">
 $(function(){
-  let htmlStr = "";
-  
-  htmlStr += "<table class='basic-table'>";
-  htmlStr += "<tr>";
-  htmlStr += "<th>구분</th>";	
-  htmlStr += "<th>개발 테스트 쿠폰</th>";
-  htmlStr += "<th>운영 테스트 쿠폰</th>";	
-  htmlStr += "</tr>";
-  htmlStr += "<tr><td>쿠폰아님</td><td>9902204001700027528</td><td>9902204005700558990</td></tr>";
-  htmlStr += "<tr><td>쿠폰아님</td><td>9902204001700027511</td><td>9902204005700558983</td></tr>";
-  htmlStr += "<tr><td>쿠폰아님</td><td>9902204001700027504</td><td>9902204005700558976</td></tr>";
-  htmlStr += "<tr><td>쿠폰아님</td><td>9902204001700027498</td><td>9902204005700558969</td></tr>";
-  htmlStr += "<tr><td>쿠폰아님</td><td>9902204001700027481</td><td>9902204005700558952</td></tr>";
-  htmlStr += "<tr><td>스페셜</td><td>9902204001700027474</td><td>9902204005700558945</td></tr>";
-  htmlStr += "<tr><td>스페셜</td><td>9902204001700027467</td><td>9902204005700558938</td></tr>";
-  htmlStr += "<tr><td>스페셜</td><td>9902204001700027450</td><td>9902204005700558921</td></tr>";
-  htmlStr += "<tr><td>스페셜</td><td>9902204001700027443</td><td>9902204005700558914</td></tr>";
-  htmlStr += "</table>";
-	
-  $("#list").html(htmlStr);
-	
   $('#keyword').keyup(function(e){             
     if ( e.keyCode == 13 ){
        makeBarcode();  
@@ -74,8 +53,6 @@ function makeBarcode() {
   </form>
   
   <div id="bcTarget" class="barcodeImg"></div>  
-  
-  <div id="list" class="list-search"></div>
   
 </div>
 </body>
