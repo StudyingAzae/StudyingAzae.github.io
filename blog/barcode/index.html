@@ -23,8 +23,7 @@ function makeBarcode() {
     let type = $('#type option:selected').val();
   
     if (keyword == null || keyword == ""){
-      keyword = "9902204001700027528";
-      $('#keyword').val(keyword);
+      window.alert("barcode is null");
     }
   
     $("#bcTarget").barcode(keyword, type);   
