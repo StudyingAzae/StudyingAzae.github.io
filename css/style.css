@@ -37,6 +37,19 @@ body {
 }
 
 /* 버튼 */
+.btn-kko {
+    position: relative;
+    border: none;
+    margin-left: 20px;
+    min-width: 200px;
+    min-height: 50px;
+    background: yellow;
+    border-radius: 1000px;
+    color: darkslategray;
+    cursor: pointer;
+    box-shadow: 12px 12px 24px rgba(79, 209, 197, 0.64);
+    font-weight: 700;
+}
 
 
 /* 애니메이션 */
