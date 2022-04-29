@@ -8,20 +8,37 @@
 
 <script language="javascript">
 function goKKO(){
-	
+	var param = 'sendurl?msg=' + encodeURIComponent('보낼 메시지');
+	    param += '&url=' + 'https://studyingazae.tistory.com';
+	    param += '&type=link';
+	    param += '&apiver=2.0.1';
+	    param += '&appver=2.0';
+	    param += '&appid=studyingazae.tistory.com';
+	    param += '&appname=' + encodeURIComponent('똘아재의 노트');
+
+	if(navigator.userAgent.match(/android/i))
+	{
+	    setTimeout(function(){
+		location.href = 'intent://' + param + '#Intent;package=com.kakao.talk;end';
+	    }, 100);
+	}
+	else if(navigator.userAgent.match(/(iphone)|(ipod)|(ipad)/i))
+	{
+	    setTimeout(function(){
+		location.href = 'itms-apps://itunes.apple.com/app/id362057947?mt=8';
+	    }, 200);
+	    setTimeout(function(){
+		location.href = 'kakaolink://' + param;
+	    }, 100);
+	}
 }
-// key
-// 개발 : devU01TX0FVVEgyMDIyMDIwOTE0NTAzMjExMjIyNDE=
-// 운영 : U01TX0FVVEgyMDIyMDIxMDE0MjkwMjExMjIyODU=
 </script>
-<title>행정안전부 주소 검색 API</title>
+<title>카카오톡 공유하기 버튼</title>
 </head>
 <body>
 <div class="wrapper">
 <form name="form" id="form" method="post" onsubmit="return false;">
-	<input type="text" name="keyword" value="" onkeydown="enterSearch();" placeholder="공유할 메시지" class="input-search"/><!-- 요청 변수 설정 (키워드) -->
 	<input type="button" onClick="goKKO();" value="카카오 공유하기" class="btn-kko"/>
-	<div id="list" class="list-search"></div><!-- 검색 결과 리스트 출력 영역 -->
 </form>
 </div>
 </body>
