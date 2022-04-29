@@ -11,7 +11,7 @@
 // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
 Kakao.init('ae6366b717d287a36c17836dca0424b1');
 	
-function goKKO() {
+function blogShare() {
 	Kakao.Link.sendDefault({
 	  objectType: 'text',
 	  text:
@@ -24,6 +24,20 @@ function goKKO() {
 	  },
 	});
 }
+	
+function cooupangShare() {
+	Kakao.Link.sendDefault({
+	  objectType: 'text',
+	  text:
+	    '쿠팡 홈 가기',
+	  link: {
+	    mobileWebUrl:
+	      'https://link.coupang.com/a/mz7t9',
+	    webUrl:
+	      'https://link.coupang.com/a/mz7t9',
+	  },
+	});
+}
 </script>
 <title>카카오톡 공유하기 버튼</title>
 </head>
@@ -32,7 +46,8 @@ function goKKO() {
 <form name="form" id="form" method="post" onsubmit="return false;">
 	<input type="button" onClick="getFriends();" value="카카오 친구 공유" class="btn-kko"/>
 </form>
-<input type="button" onClick="goKKO();" value="블로그 공유" class="btn-kko"/>
+<input type="button" onClick="blogShare();" value="블로그 공유" class="btn-kko"/>
+<input type="button" onClick="cooupangShare();" value="쿠파스 공유" class="btn-kko"/>
 <ul id="friend-list"></ul>
 </div>
 </body>
