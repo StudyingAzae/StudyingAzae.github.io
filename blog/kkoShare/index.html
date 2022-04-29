@@ -15,13 +15,29 @@ function blogShare() {
 	Kakao.Link.sendDefault({
 	  objectType: 'text',
 	  text:
-	    '똘아재의 노트 보러가기',
+	    '똘아재의 노트',
 	  link: {
 	    mobileWebUrl:
 	      'https://studyingazae.tistory.com',
 	    webUrl:
 	      'https://studyingazae.tistory.com',
 	  },
+	buttons: [
+        {
+          title: '똘아재의 노트 보러가기기',
+          link: {
+            mobileWebUrl: 'https://studyingazae.tistory.com',
+            webUrl: 'https://studyingazae.tistory.com',
+          },
+        },
+        {
+          title: '똘아재의 노트 보러가기',
+          link: {
+            mobileWebUrl: 'https://studyingazae.tistory.com',
+            webUrl: 'https://studyingazae.tistory.com',
+          },
+        },
+      ],
 	});
 }
 	
@@ -29,13 +45,29 @@ function cooupangShare() {
 	Kakao.Link.sendDefault({
 	  objectType: 'text',
 	  text:
-	    '쿠팡 홈 가기',
+	    '쿠팡 이걸로 주문하면 주문자는 아무 불이익 없고, 똘한테 3프로 떨어짐. 찝찝하면 안 해도 됨.',
 	  link: {
 	    mobileWebUrl:
 	      'https://link.coupang.com/a/mz7t9',
 	    webUrl:
 	      'https://link.coupang.com/a/mz7t9',
 	  },
+	buttons: [
+        {
+          title: '쿠팡 홈 가기',
+          link: {
+            mobileWebUrl: 'https://link.coupang.com/a/mz7t9',
+            webUrl: 'https://link.coupang.com/a/mz7t9',
+          },
+        },
+        {
+          title: '똘아재의 노트 보러가기',
+          link: {
+            mobileWebUrl: 'https://link.coupang.com/a/mz7t9',
+            webUrl: 'https://link.coupang.com/a/mz7t9',
+          },
+        },
+      ],
 	});
 }
 </script>
