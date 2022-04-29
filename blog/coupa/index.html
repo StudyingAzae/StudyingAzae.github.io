@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/JavaScript" src="/lib/jquery-3.6.0.min.js" ></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<script language="javascript">
+// SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+Kakao.init('ae6366b717d287a36c17836dca0424b1');
+	
+function goKKO() {
+	Kakao.Link.sendDefault({
+	  objectType: 'text',
+	  text:
+	    '쿠팡 주문하러가기',
+	  link: {
+	    mobileWebUrl:
+	      'https://link.coupang.com/a/mz7t9',
+	    webUrl:
+	      'https://link.coupang.com/a/mz7t9',
+	  },
+	});
+}
+</script>
+<title>카카오톡 공유하기 버튼</title>
+</head>
+<body>
+<div class="wrapper">
+<form name="form" id="form" method="post" onsubmit="return false;">
+	<input type="button" onClick="getFriends();" value="카카오 친구 공유" class="btn-kko"/>
+</form>
+<input type="button" onClick="goKKO();" value="쿠팡 주문가기 버튼" class="btn-kko"/>
+<ul id="friend-list"></ul>
+</div>
+</body>
+</html>
