@@ -56,7 +56,7 @@ function sendMessage(id) {
     }
   }
   function getFriends() {
-    document.getElementById('friend-list').innerHTML = ''
+    document.getElementById('friend-list').innerHTML = '';
     Kakao.Auth.login({
       scope: 'friends,talk_message',
       success: function (res) {
