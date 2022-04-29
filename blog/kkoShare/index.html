@@ -8,6 +8,9 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 
 <script language="javascript">
+// SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+Kakao.init('ae6366b717d287a36c17836dca0424b1');
+	
 function sendMessage(id) {
     if (confirm('메시지를 전송하겠습니까?')) {
       Kakao.API.request({
