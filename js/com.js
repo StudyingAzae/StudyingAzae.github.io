@@ -1,5 +1,5 @@
 // null check
-function isNull(str){
+function com.isNull(str){
   if(str == null || str == "" || str == "undefined"){
     return true; 
   }
@@ -8,7 +8,7 @@ function isNull(str){
 }
 
 // not null check
-function isNotNull(str){
+function com.isNotNull(str){
   if(str == null || str == "" || str == "undefined"){
     return false; 
   }
