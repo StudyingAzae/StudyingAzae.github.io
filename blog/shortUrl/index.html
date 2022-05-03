@@ -21,7 +21,7 @@ function getUrl(){
 		 url :"https://openapi.naver.com/v1/util/shorturl.json"  //인터넷망
 		,type:"post"
 		,data:$("#form").serialize()
-		,dataType:"json"
+		,dataType:"jsonp"
 		,crossDomain:true
 		,success:function(jsonStr){
 			$("#list").html("");
