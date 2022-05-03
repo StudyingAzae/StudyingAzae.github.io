@@ -10,8 +10,9 @@
 function getUrl(){
   var keyword = $('#keyword').val();
   if (keyword == null || keyword == ""){
-    alert("keyword is null");
-    return; 
+    //alert("keyword is null");
+    //return; 
+	  keyword = "https://studyingazae.tistory.com";
   }
   var query = encodeURI(keyword);
   $('#url').val(query);
