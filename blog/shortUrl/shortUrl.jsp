@@ -1,1 +1,99 @@
 
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script type="text/JavaScript" src="/lib/jquery-3.6.0.min.js" ></script>
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<script type="text/javascript">
+  
+function getUrl(){
+  var keyword = $('#keyword').val();
+  if (keyword == null || keyword == ""){
+    //alert("keyword is null");
+    //return; 
+	  keyword = "https://studyingazae.tistory.com";
+  }
+  var query = encodeURI(keyword);
+  $('#url').val(query);
+  
+	$.ajax({
+		 url :"https://openapi.naver.com/v1/util/shorturl.json"  //인터넷망
+		,type:"post"
+		,data:$("#form").serialize()
+		,dataType:"jsonp"
+		,crossDomain:true
+		,success:function(jsonStr){
+			$("#list").html("");
+			var errCode = jsonStr.code;
+			var errDesc = jsonStr.message;
+			if(errCode != "0"){
+				alert(errCode+"="+errDesc);
+			}else{
+				if(jsonStr != null){
+					makeListJson(jsonStr);
+				}
+			}
+		}
+	    ,error: function(xhr,status, error){
+	    	alert("에러발생 : " + status + " :: " + error);
+	    }
+	});
+}
+
+function makeListJson(jsonStr){
+	var htmlStr = "";
+	htmlStr += "<table class='basic-table'>";
+	htmlStr += "<tr>";
+    htmlStr += "<th>코드</th>";	
+		htmlStr += "<th>메세지</th>";	
+		htmlStr += "<th>Short URL</th>";
+		htmlStr += "<th>원본 URL</th>";
+		htmlStr += "</tr>";
+	
+	$(jsonStr.results.juso).each(function(){
+		htmlStr += "<tr>";
+    htmlStr += "<td>"+this.code+"</td>";
+		htmlStr += "<td>"+this.message+"</td>";
+		htmlStr += "<td>"+this.result.url+"</td>";
+		htmlStr += "<td>"+this.result.orgUrl+"</td>";
+		htmlStr += "</tr>";
+	});
+	htmlStr += "</table>";
+	$("#list").html(htmlStr);
+}
+
+function enterSearch() {
+	var evt_code = (window.netscape) ? ev.which : event.keyCode;
+	if (evt_code == 13) {    
+		event.keyCode = 0;  
+		getUrl(); 
+	} 
+}
+// key
+// 개발 : devU01TX0FVVEgyMDIyMDIwOTE0NTAzMjExMjIyNDE=
+// 운영 : U01TX0FVVEgyMDIyMDIxMDE0MjkwMjExMjIyODU=
+</script>
+<title>Short URL API</title>
+</head>
+<body>
+<div class="wrapper">
+<form name="form" id="form" method="post" onsubmit="return false;">
+	<input type="hidden" name="client_id" value="Pp9LYY16Hc71uzTBV1Kw"/> <!-- 요청 변수 설정 (현재 페이지. currentPage : n > 0) -->
+	<input type="hidden" name="client_secret" value="83O0ReWK3m"/><!-- 요청 변수 설정 (페이지당 출력 개수. countPerPage 범위 : 0 < n <= 100) -->
+	<input type="hidden" name="url" id="url" value="json"/> <!-- 요청 변수 설정 (검색결과형식 설정, json) -->
+</form>
+<input type="text" name="keyword" id="keyword" value="" onkeydown="enterSearch();" placeholder="https://StudyingAzae.tistory.com" class="input-search"/><!-- 요청 변수 설정 (키워드) -->
+<input type="button" onClick="getUrl();" value="Short Url Create" class="btn-search"/>
+<div id="list" class="list-search"></div><!-- 검색 결과 리스트 출력 영역 -->
+</div>
+</body>
+</html>
+</html>
