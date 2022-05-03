@@ -17,7 +17,7 @@ function com.isNotNull(str){
 }
 
 //특수문자, 특정문자열(sql예약어의 앞뒤공백포함) 제거
-function checkSearchedWord(obj){
+function com.checkSearchedWord(obj){
 	if(obj.value.length >0){
 		//특수문자 제거
 		var expText = /[%=><]/ ;
