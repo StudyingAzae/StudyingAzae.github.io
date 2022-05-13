@@ -23,7 +23,7 @@ body {
 // 모바일
 @media ( max-width: 767px ){
     .wrapper {
-	width: 100%;
+	width: auto;
     }
 }
 // 태블릿 세로
