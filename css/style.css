@@ -20,6 +20,10 @@ body {
   width: auto;
 }
 
+.content {
+  width: auto;	
+}
+
 // 모바일
 @media ( max-width: 767px ){
     .wrapper {
