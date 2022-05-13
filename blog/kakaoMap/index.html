@@ -75,54 +75,13 @@ function displayMarker(place) {
     kakao.maps.event.addListener(marker, 'click', function() {
 	// 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
 	var infowindow = new kakao.maps.InfoWindow({zIndex:1});
-	    
+	console.log(place);
         // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
         infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
         infowindow.open(map, marker);
     });
 }
 	
-function poly(){
-	// 다각형을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 다각형을 표시합니다
-	var polygonPath = [
-	        new kakao.maps.LatLng(37.5993781334091,	126.663339348625),
-		new kakao.maps.LatLng(37.6009506701527,	126.664674580863),
-		new kakao.maps.LatLng(37.6020371306694,	126.666298511962),
-		new kakao.maps.LatLng(37.6034666598075,	126.670737256967),
-		new kakao.maps.LatLng(37.6039526934568,	126.673155109937),
-		new kakao.maps.LatLng(37.6038955131923,	126.676836020428),
-		new kakao.maps.LatLng(37.6030092134721,	126.680300406773),
-		new kakao.maps.LatLng(37.600636165463,	126.683945229907),
-		new kakao.maps.LatLng(37.5986633329926,	126.685857859869),
-		new kakao.maps.LatLng(37.5959184355779,	126.687048742675),
-		new kakao.maps.LatLng(37.5919438734147,	126.687084830033),
-		new kakao.maps.LatLng(37.588912769519,	126.686110471295),
-		new kakao.maps.LatLng(37.5864534814413,	126.684125666618),
-		new kakao.maps.LatLng(37.5839655143135,	126.681022153851),
-		new kakao.maps.LatLng(37.5829359863512,	126.675753399618),
-		new kakao.maps.LatLng(37.5831647715733,	126.669798985587),
-		new kakao.maps.LatLng(37.5843658824537,	126.66683982225 ),
-		new kakao.maps.LatLng(37.5875687500572,	126.662834125539),
-		new kakao.maps.LatLng(37.5900280012863,	126.660957582935),
-		new kakao.maps.LatLng(37.5936881317119,	126.660344097853),
-		new kakao.maps.LatLng(37.5969763767027,	126.661138019701),
-		new kakao.maps.LatLng(37.5992065818556,	126.662978474947),
-	];
-
-	// 지도에 표시할 다각형을 생성합니다
-	var polygon = new kakao.maps.Polygon({
-	    path:polygonPath, // 그려질 다각형의 좌표 배열입니다
-	    strokeWeight: 3, // 선의 두께입니다
-	    strokeColor: '#39DE2A', // 선의 색깔입니다
-	    strokeOpacity: 0.8, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
-	    strokeStyle: 'longdash', // 선의 스타일입니다
-	    fillColor: '#A2FF99', // 채우기 색깔입니다
-	    fillOpacity: 0.7 // 채우기 불투명도 입니다
-	});
-
-	// 지도에 다각형을 표시합니다
-	polygon.setMap(map);	
-}
 </script>
 <title>지도 검색</title>
 </head>
@@ -130,7 +89,6 @@ function poly(){
 <div class="wrapper">
 <input type="text" id="keyword" value="" placeholder="예) 주소, 건물, 키워드 등" class="input-search"/><!-- 요청 변수 설정 (키워드) -->
 <input type="button" onClick="keywordSearch();" value="지도 검색" class="btn-search"/>
-<input type="button" onClick="poly();" value="폴리곤 좌표" class="btn-search" style="display:none"/>
 <div id="map" style="width:700px;height:500px;"></div>
 </div>
 </body>
