@@ -21,7 +21,7 @@ body {
 }
 
 .content {
-  width: 700px;	
+  width: auto;	
   height: 500px;
 }
 
@@ -32,7 +32,7 @@ body {
 	}
 
 	.content {
-	  width: 500px;	
+	  width: auto;	
 	  height: 300px;
 	}
 }
