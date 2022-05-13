@@ -26,6 +26,10 @@ $(function(){
 
 	// 아래 코드는 위에서 추가한 교통정보 지도타입을 제거합니다
 	// map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);  
+	// 장소 검색 객체를 생성합니다
+	var ps = new kakao.maps.services.Places(); 
+	// 키워드로 장소를 검색합니다
+	ps.keywordSearch("서울", placesSearchCB); 
 });  
 	
 function keywordSearch(){
