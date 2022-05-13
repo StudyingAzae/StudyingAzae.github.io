@@ -1,5 +1,5 @@
 // null check
-function com.isNull(str){
+function isNull(str){
   if(str == null || str == "" || str == "undefined"){
     return true; 
   }
@@ -8,7 +8,7 @@ function com.isNull(str){
 }
 
 // not null check
-function com.isNotNull(str){
+function isNotNull(str){
   if(str == null || str == "" || str == "undefined"){
     return false; 
   }
@@ -17,7 +17,7 @@ function com.isNotNull(str){
 }
 
 //특수문자, 특정문자열(sql예약어의 앞뒤공백포함) 제거
-function com.checkSearchedWord(obj){
+function checkSearchedWord(obj){
 	if(obj.value.length >0){
 		//특수문자 제거
 		var expText = /[%=><]/ ;
