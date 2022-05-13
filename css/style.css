@@ -23,16 +23,12 @@ body {
 .content {
   width: auto;	
   height: 500px;
+  margin: 10px;
 }
 
 // 모바일
 @media ( max-width: 767px ){
-	.wrapper {
-	width: auto;
-	}
-
 	.content {
-	  width: auto;	
 	  height: 300px;
 	}
 }
