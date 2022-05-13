@@ -123,10 +123,25 @@ body {
   margin:50px auto; 
 }
 
-@media ( max-width: 1000px ){
-	.wrapper {
-		width: auto;
-	}
+// 모바일
+@media ( max-width: 767px ){
+    .wrapper {
+	width: 100%;
+    }
+}
+// 태블릿 세로
+@media ( max-width: 768px ) and ( max-width : 991px ){
+	
+}
+// 태블릿 가로
+@media ( max-width: 992px ) and ( max-width : 1199px ){
+	
+}
+// 데스크탑
+@media ( max-width: 1200px ){
+    .wrapper {
+	width: auto;
+    }
 }
 
     #githubLink {
