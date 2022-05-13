@@ -24,7 +24,7 @@ $(function(){
 	
 function keywordSearch(){
 	var keyword = $("#keyword").val();
-	if(com.isNull(keyword)){
+	if(isNull(keyword)){
 		window.alert("키워드를 입력해주세요.", function(){
 			return;	
 		});
@@ -75,11 +75,28 @@ function displayMarker(place) {
 function poly(){
 	// 다각형을 구성하는 좌표 배열입니다. 이 좌표들을 이어서 다각형을 표시합니다
 	var polygonPath = [
-	    new kakao.maps.LatLng(33.45133510810506, 126.57159381623066),
-	    new kakao.maps.LatLng(33.44955812811862, 126.5713551811832),
-	    new kakao.maps.LatLng(33.449986291544086, 126.57263296172184),
-	    new kakao.maps.LatLng(33.450682513554554, 126.57321034054742),
-	    new kakao.maps.LatLng(33.451346760004206, 126.57235740081413) 
+	        new kakao.maps.LatLng(37.5993781334091,	126.663339348625),
+		new kakao.maps.LatLng(37.6009506701527,	126.664674580863),
+		new kakao.maps.LatLng(37.6020371306694,	126.666298511962),
+		new kakao.maps.LatLng(37.6034666598075,	126.670737256967),
+		new kakao.maps.LatLng(37.6039526934568,	126.673155109937),
+		new kakao.maps.LatLng(37.6038955131923,	126.676836020428),
+		new kakao.maps.LatLng(37.6030092134721,	126.680300406773),
+		new kakao.maps.LatLng(37.600636165463,	126.683945229907),
+		new kakao.maps.LatLng(37.5986633329926,	126.685857859869),
+		new kakao.maps.LatLng(37.5959184355779,	126.687048742675),
+		new kakao.maps.LatLng(37.5919438734147,	126.687084830033),
+		new kakao.maps.LatLng(37.588912769519,	126.686110471295),
+		new kakao.maps.LatLng(37.5864534814413,	126.684125666618),
+		new kakao.maps.LatLng(37.5839655143135,	126.681022153851),
+		new kakao.maps.LatLng(37.5829359863512,	126.675753399618),
+		new kakao.maps.LatLng(37.5831647715733,	126.669798985587),
+		new kakao.maps.LatLng(37.5843658824537,	126.66683982225 ),
+		new kakao.maps.LatLng(37.5875687500572,	126.662834125539),
+		new kakao.maps.LatLng(37.5900280012863,	126.660957582935),
+		new kakao.maps.LatLng(37.5936881317119,	126.660344097853),
+		new kakao.maps.LatLng(37.5969763767027,	126.661138019701),
+		new kakao.maps.LatLng(37.5992065818556,	126.662978474947),
 	];
 
 	// 지도에 표시할 다각형을 생성합니다
@@ -103,6 +120,7 @@ function poly(){
 <div class="wrapper">
 <input type="text" id="keyword" value="" placeholder="예) 이태원 맛집, 강남대로 11, 63빌딩 등" class="input-search"/><!-- 요청 변수 설정 (키워드) -->
 <input type="button" onClick="keywordSearch();" value="지도 검색" class="btn-search"/>
+<input type="button" onClick="poly();" value="폴리곤 좌표" class="btn-search"/>
 <div id="map" style="width:700px;height:500px;"></div>
 </div>
 </body>
