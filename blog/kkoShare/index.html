@@ -12,29 +12,29 @@
 Kakao.init('ae6366b717d287a36c17836dca0424b1');
 	
 function blogShare() {
+	var blogUrl = "https://studyingazae.tistory.com";
 	Kakao.Link.sendDefault({
 	  objectType: 'text',
 	  text:
 	    '똘아재의 노트',
 	  link: {
-	    mobileWebUrl:
-	      'https://studyingazae.tistory.com',
-	    webUrl:
-	      'https://studyingazae.tistory.com',
+	    mobileWebUrl: blogUrl,
+	    webUrl: blogUrl,
 	  },
 	buttons:[ 
         {
 		  title: '똘아재의 노트 보러가기기',
 		  link: {
-		    mobileWebUrl: 'https://studyingazae.tistory.com',
-		    webUrl: 'https://studyingazae.tistory.com',
+		    mobileWebUrl: blogUrl,
+		    webUrl: blogUrl,
 		  },
 		},
 	   ],
 	});
 }
 	
-function cooupangShare() {
+function coupangShare() {
+	var coupangUrl = "https://link.coupang.com/a/mz7t9";
 	Kakao.Link.sendDefault({
 	  objectType: 'feed',
           content:{
@@ -42,20 +42,18 @@ function cooupangShare() {
 		    '쿠팡 주문 하기',
 		  description : '쿠팡 이걸로 주문하면 주문자는 아무 불이익 없고, 똘한테 3프로 떨어짐. 찝찝하면 안 해도 됨.',
 		  imageUrl:
-		  '/image/coupang.png',	
+		  '../../../image/coupang.png',	
 		  link: {
-		    mobileWebUrl:
-		      'https://link.coupang.com/a/mz7t9',
-		    webUrl:
-		      'https://link.coupang.com/a/mz7t9',
+		    mobileWebUrl: coupangUrl,
+		    webUrl: coupangUrl,
 		  },
 	  },
 	buttons: [ 
         {
           title: '쿠팡 홈 가기',
           link: {
-            mobileWebUrl: 'https://link.coupang.com/a/mz7t9',
-            webUrl: 'https://link.coupang.com/a/mz7t9',
+            mobileWebUrl: coupangUrl,
+            webUrl: coupangUrl,
           },
         },
 		],
@@ -67,7 +65,7 @@ function cooupangShare() {
 <body>
 <div class="wrapper">
 <input type="button" onClick="blogShare();" value="블로그 공유" class="btn-kko"/>
-<input type="button" onClick="cooupangShare();" value="쿠파스 공유" class="btn-kko"/>
+<input type="button" onClick="coupangShare();" value="쿠파스 공유" class="btn-kko"/>
 <ul id="friend-list"></ul>
 </div>
 </body>
