@@ -38,14 +38,13 @@ function coupangShare() {
 	Kakao.Link.sendDefault({
 	  objectType: 'feed',
           content:{
-		  title:
-		    '쿠팡 주문 하기',
+		  title: '쿠팡 주문 하기',
 		  description : '쿠팡 이걸로 주문하면 주문자는 아무 불이익 없고, 똘한테 3프로 떨어짐. 찝찝하면 안 해도 됨.',
 		  imageUrl:
-		  '../../../image/coupang.png',	
+		  'https://github.com/StudyingAzae/StudyingAzae.github.io/blob/main/image/coupang.png',	
 		  link: {
 		    mobileWebUrl: coupangUrl,
-		    webUrl: coupangUrl,
+		    androidExecutionParam: 'test',
 		  },
 	  },
 	buttons: [ 
@@ -53,7 +52,6 @@ function coupangShare() {
           title: '쿠팡 홈 가기',
           link: {
             mobileWebUrl: coupangUrl,
-            webUrl: coupangUrl,
           },
         },
 		],
