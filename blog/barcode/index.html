@@ -36,23 +36,18 @@ function makeBarcode() {
       $("#bcTarget").barcode(keyword, type);   
     }
 }
-  
-// 한글 특수문자, 특정문자열(sql예약어의 앞뒤공백포함) 제거
-function checkSearchedWord(obj){
-	if(obj.length >0){
+	
+//특수문자, 특정문자열(sql예약어의 앞뒤공백포함) 제거
+function checkSearchedWord(str){
+	console.log("str : " + str);
+	if(str.length >0){
 		//특수문자 제거
 		var expText = /[%=><]/ ;
-		if(expText.test(obj) == true){
+		if(expText.test(str) == true){
 			swal("Error", "특수문자를 입력 할수 없습니다.", "error");
-			obj = obj.split(expText).join(""); 
+			str = str.split(expText).join(""); 
 			return false;
 		}
-    
-    // 한글 체크
-    var regExp = /[ㄱ-ㅎㅏ-ㅣ가-힣]/g; 
-    if(!regExp.test(obj)){
-       return false;
-    }
 		
 		//특정문자열(sql예약어의 앞뒤공백포함) 제거
 		var sqlArray = new Array(
@@ -65,13 +60,20 @@ function checkSearchedWord(obj){
 		for(var i=0; i<sqlArray.length; i++){
 			regex = new RegExp( sqlArray[i] ,"gi") ;
 			
-			if (regex.test(obj) ) {
-				swal("Error", "\"" + sqlArray[i]+"\"와(과) 같은 특정문자로 검색할 수 없습니다.", "error");
-				obj =obj.replace(regex, "");
+			if (regex.test(str) ) {
+			    swal("Error", "\"" + sqlArray[i]+"\"와(과) 같은 특정문자로 검색할 수 없습니다.", "error");
+				str = str.replace(regex, "");
 				return false;
 			}
 		}
+	    // 한글 체크
+	    var regExp = /[ㄱ-ㅎㅏ-ㅣ가-힣]/g; 
+	    if(!regExp.test(str)){
+	       return false;
+	    }
 	}
+	
+	
 	return true ;
 }
 
