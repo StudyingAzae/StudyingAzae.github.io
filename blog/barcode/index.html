@@ -39,7 +39,7 @@ function makeBarcode() {
 	
 //특수문자, 특정문자열(sql예약어의 앞뒤공백포함) 제거
 function checkSearchedWord(str){
-	console.log("str : " + str);
+	console.log("str : " + str.length);
 	if(str.length >0){
 		//특수문자 제거
 		var expText = /[%=><]/ ;
