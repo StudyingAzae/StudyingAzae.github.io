@@ -30,9 +30,11 @@ function makeBarcode() {
     }else{
       // 호출 전에 검색어 체크
       if (!checkSearchedWord(keyword)) {
+	console.log("return");
         return ;
       }
-  
+  	
+      console.log("barcode");
       $("#bcTarget").barcode(keyword, type);   
     }
 }
