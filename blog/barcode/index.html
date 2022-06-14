@@ -30,18 +30,15 @@ function makeBarcode() {
     }else{
       // 호출 전에 검색어 체크
       if (!checkSearchedWord(keyword)) {
-	console.log("return");
         return ;
       }
   	
-      console.log("barcode");
       $("#bcTarget").barcode(keyword, type);   
     }
 }
 	
 //특수문자, 특정문자열(sql예약어의 앞뒤공백포함) 제거
 function checkSearchedWord(str){
-	console.log("str : " + str.length);
 	if(str.length >0){
 	    // 한글 체크
 	    var regExp = /[ㄱ-ㅎㅏ-ㅣ가-힣]/g; 
