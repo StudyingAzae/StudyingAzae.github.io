@@ -42,6 +42,7 @@ function checkSearchedWord(str){
 	if(str.length >0){
 	    // 한글 체크
 	    var regExp = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g; 
+		console.log ( regExp.test(str) );
 	    if(!regExp.test(str)){
 	       return false;
 	    }
