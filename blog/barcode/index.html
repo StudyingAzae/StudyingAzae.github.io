@@ -39,18 +39,18 @@ function makeBarcode() {
   
 // 한글 특수문자, 특정문자열(sql예약어의 앞뒤공백포함) 제거
 function checkSearchedWord(obj){
-	if(obj.value.length >0){
+	if(obj.length >0){
 		//특수문자 제거
 		var expText = /[%=><]/ ;
-		if(expText.test(obj.value) == true){
+		if(expText.test(obj) == true){
 			swal("Error", "특수문자를 입력 할수 없습니다.", "error");
-			obj.value = obj.value.split(expText).join(""); 
+			obj = obj.split(expText).join(""); 
 			return false;
 		}
     
     // 한글 체크
     var regExp = /[ㄱ-ㅎㅏ-ㅣ가-힣]/g; 
-    if(!regExp.test(str)){
+    if(!regExp.test(obj)){
        return false;
     }
 		
@@ -65,9 +65,9 @@ function checkSearchedWord(obj){
 		for(var i=0; i<sqlArray.length; i++){
 			regex = new RegExp( sqlArray[i] ,"gi") ;
 			
-			if (regex.test(obj.value) ) {
+			if (regex.test(obj) ) {
 				swal("Error", "\"" + sqlArray[i]+"\"와(과) 같은 특정문자로 검색할 수 없습니다.", "error");
-				obj.value =obj.value.replace(regex, "");
+				obj =obj.replace(regex, "");
 				return false;
 			}
 		}
