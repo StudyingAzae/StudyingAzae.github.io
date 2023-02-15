@@ -65,6 +65,7 @@ body {
     position: relative;
     border: none;
     margin-left: 20px;
+    margin-bottom: 10px;
     min-width: 200px;
     min-height: 50px;
     background: linear-gradient(
@@ -84,27 +85,6 @@ body {
 	.btn-search {
 	    color: white;
 	}
-}
-
-.btn-search:hover {
-    transform: scale(1.2);
-}
-
-.btn-search:hover::after {
-    content: "";
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    border: 6px solid #00ffcb;
-	background: linear-gradient(
-        90deg,
-        rgba(129, 230, 217, 1) 0%,
-        rgba(79, 209, 197, 1) 100%
-    );
-    position: absolute;
-    z-index: -1;
-    top: 50%;
-    left: 50%;
 }
 
 /* INPUT */
