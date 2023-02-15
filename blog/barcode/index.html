@@ -61,6 +61,7 @@ function goQrCode () {
 </head>
 <body>
 <div class="wrapper">
+  <div><h> 바코드 생성하기 </h></div>
   <select id="type" class="front-selectbox" >
       <option selected="selected"  value="code128">code128 (default)</option>  
       <option value="code39">code39</option>
@@ -74,11 +75,11 @@ function goQrCode () {
       <option value="datamatrix">datamatrix</option>
     </select>
   <form name="form" id="form" method="post" onsubmit="return false;">
-    <input type="text" name="keyword" id="keyword" value="" class="input-search"/>
+    <input type="text" name="keyword" id="keyword" value="" class="input-search" placeholder="ex) 생성하려는 바코드 내용을 입력하세요."/>
     <input type="button" onClick="makeBarcode();" value="생성" class="btn-search"/>
   </form>
 	
-	<input type="button" onClick="goQrCode();" value="이동" class="btn-search"/>
+  <input type="button" onClick="goQrCode();" value="이동" class="btn-search"/>
   
   <div id="bcTarget" class="barcodeImg"></div>  
   
