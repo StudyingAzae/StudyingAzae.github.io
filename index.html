@@ -6,13 +6,22 @@
 <script type="text/JavaScript" src="/lib/jquery-3.6.0.min.js" ></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3633437332762260" crossorigin="anonymous"></script>
 <link rel="stylesheet" type="text/css" href="/css/style.css">
-
 <script language="javascript">
+  function goUrl (url) {
+	  location.href = "/blog/" + url;
+  }
 </script>
 </head>
 <body>
 <div class="wrapper">
   <h>HELLO WORLD</h>
+  
+  <input type="button" onClick="goUrl("barcode");" value="바코드 생성" class="btn-search"/>
+  <input type="button" onClick="goUrl("QRcode");" value="QR 생성" class="btn-search"/>
+  <input type="button" onClick="goUrl("addrSearch");" value="주소 검색" class="btn-search"/>
+  <input type="button" onClick="goUrl("kakaoMap");" value="카카오맵" class="btn-search"/>
+  <input type="button" onClick="goUrl("kkoShare");" value="카카오 공유" class="btn-search"/>
+  <input type="button" onClick="goUrl("shortUrl");" value="short URL" class="btn-search"/>
 </div>
 </body>
 </html>
