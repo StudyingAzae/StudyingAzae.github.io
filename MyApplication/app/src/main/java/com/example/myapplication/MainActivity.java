@@ -1,16 +1,29 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.os.Build;
 import android.os.Bundle;
+import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 public class MainActivity extends AppCompatActivity {
     private WebView mWebView; // 웹뷰 선언
+    private AdView mAdView; // 웹뷰 선언
     private WebSettings mWebSettings; //웹뷰세팅
 
+    @SuppressLint("MissingPermission")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +31,16 @@ public class MainActivity extends AppCompatActivity {
 
         // 웹뷰 시작
         mWebView = (WebView) findViewById(R.id.webView);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(@NonNull InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         mWebView.setWebViewClient(new WebViewClient()); // 클릭시 새창 안뜨게
         mWebSettings = mWebView.getSettings(); //세부 세팅 등록
@@ -32,6 +55,9 @@ public class MainActivity extends AppCompatActivity {
         mWebSettings.setCacheMode(WebSettings.LOAD_NO_CACHE); // 브라우저 캐시 허용 여부
         mWebSettings.setDomStorageEnabled(true); // 로컬저장소 허용 여부
 
-        mWebView.loadUrl("https://studyingazae.tistory.com"); // 웹뷰에 표시할 웹사이트 주소, 웹뷰 시작
+        mWebView.setWebChromeClient(new WebChromeClient());
+
+        mWebView.loadUrl("https://studyingazae.github.io/blog/barcode/"); // 웹뷰에 표시할 웹사이트 주소, 웹뷰 시작
+
     }
 }
