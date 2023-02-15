@@ -43,7 +43,7 @@ function checkSearchedWord(str){
 	    // 한글 체크
 	    var regExp = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g; 
 	    if(regExp.test(str)){
-	       swal("Error", "Invalid Character", "error");
+	       swal("Error", "숫자와 영문만 가능합니다.", "error");
 	       return false;
 	    }
 	}
