@@ -38,20 +38,26 @@ function makeQRcode() {
         text   : keyword        //QR코드에 실릴 문자열
     });
 }
+  
+function goBarCode () {
+	location.href = "../barcode/";
+}
 
 </script>
 <title>QR code gen</title>
 </head>
 <body>
 <div class="wrapper">
+  <div><h> QR코드 생성하기 </h></div>
   <select id="type" class="front-selectbox" >
       <option selected="selected"  value="canvas">canvas (default)</option>  
       <option value="table">table</option>
   </select>
   <div>
-    <input type="text" name="keyword" id="keyword" value="" class="input-search" placeholder="ex) StudyingAzae.tistory.com"/>
+    <input type="text" name="keyword" id="keyword" value="" class="input-search" placeholder="ex) 생성하려는 QR코드 내용을 입력하세요."/>
     <input type="button" onClick="makeQRcode();" value="QR코드 생성" class="btn-search"/>
   </div>
+  <input type="button" onClick="goBarCode();" value="이동" class="btn-search"/>
   
  <div id="qrcode" class="barcodeImg"></div>
   
