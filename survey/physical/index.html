@@ -12,34 +12,24 @@
 
 <script language="javascript">
 $(function(){
-	localStorage.clear();
-/*
-0. 여? 남?
-1. 있다 없다
-2. 만족 불만족
-3. 친구가 일진한테 삥뜯, 맞는중, 바로? 선생님?
-4. 술마시다가 모르는 사람과 싸워 본 적 있다. 없다.
-5. suv 승용차
-6. 오래달리기 vs 팔굽혀펴기(윗몸일으키기)
-7. 부먹? 찍먹?
-8. 밥먹고 양치 바로한다 vs 미루고미루다가 하거나 까먹는다
-9. 칠판긁는 소리 vs 싫은사람이 거는말
-	*/
-	
 });  
   	
-function goNext (idx, score) {
-	console.log( "total : " + $("#total").val() );
-	let totalScore = parseInt($("#total").val()) + parseInt(score);
+let goNext = (idx, score) => {
+	if (idx == 1){
+		$("#gender").val(score);
+	}else{
+		$("#total").val(parseInt($("#total").val()) + parseInt(score));
+	}
 	
-	$("#total").val(totalScore);
-	console.log( "total2 : " + $("#total").val() );
-	
-	//localStorage.setItem("totScore", totScore);
-	//location.href = "./question2.html";
 	if (idx < 10){
 		$("#question" + idx).hide();
 		$("#question" + (parseInt(idx)+1)).show();
+	}else if(idx == 10){
+		swal("테스트를 마쳤습니다.", "결과보러가기", "success");
+		location.href = "./result.html";	
+	}else{
+		swal("error", "error", "info");
+		location.href = "./index.html";	
 	}
 }
 	
@@ -51,19 +41,67 @@ function goNext (idx, score) {
 <div class="wrapper">
   <div><h> 피지컬 테스트 </h></div>
   <div id="question1">
-	  <div><h2> 성별 </h2></div>
+	  <h2> 당신의 성별은? </h2>
 	  <input type="button" onClick="goNext(1, 1);" value="남자" class="btn-search"/>
 	  <input type="button" onClick="goNext(1, 0);" value="여자" class="btn-search"/>
-	  <div><h3>(1/10)</h3></div>
+	  <h3>(1/10)</h3>
   </div>
   <div id="question2" style="display:none">
-	  <div><h2> 운동한적 있다 없다 </h2></div>
-	  <input type="button" onClick="goNext(2, 1);" value="있다" class="btn-search"/>
-	  <input type="button" onClick="goNext(2, 0);" value="없다" class="btn-search"/>
-	  <div><h3>(2/10)</h3></div>
+	  <h2> 일주일에 2번 이상 운동을 하는가? </h2>
+	  <input type="button" onClick="goNext(2, 1);" value="2번 이상" class="btn-search"/>
+	  <input type="button" onClick="goNext(2, 0);" value="안해" class="btn-search"/>
+	  <h3>(2/10)</h3>
+  </div>
+  <div id="question3" style="display:none">
+	  <h2> 탕수육 부먹? 찍먹? </h2>
+	  <input type="button" onClick="goNext(3, 1);" value="호방한 부먹" class="btn-search"/>
+	  <input type="button" onClick="goNext(3, 0);" value="미식가 찍먹" class="btn-search"/>
+	  <h3>(3/10)</h3>
+  </div>
+  <div id="question4" style="display:none">
+	  <h2> 길에서 친한 친구가 폭행당하는 장면을 목격했다.<br>당신의 대처는? </h2>
+	  <input type="button" onClick="goNext(4, 1);" value="바로 달려들어 같이 싸운다" class="btn-search"/>
+	  <input type="button" onClick="goNext(4, 0);" value="근처 경찰서에서 경찰을 부른다" class="btn-search"/>
+	  <h3>(4/10)</h3>
+  </div>
+  <div id="question5" style="display:none">
+	  <h2> 더 듣기 싫은 소리는? </h2>
+	  <input type="button" onClick="goNext(5, 1);" value="팀장(선생님)이 부르는 소리" class="btn-search"/>
+	  <input type="button" onClick="goNext(5, 0);" value="칠판(쇠) 긁는 소리" class="btn-search"/>
+	  <h3>(5/10)</h3>
+  </div>
+  <div id="question6" style="display:none">
+	  <h2> 현재 자신의 몸상태(피지컬)에 만족하는가? </h2>
+	  <input type="button" onClick="goNext(6, 1);" value="만족" class="btn-search"/>
+	  <input type="button" onClick="goNext(6, 0);" value="불만족" class="btn-search"/>
+	  <h3>(6/10)</h3>
+  </div>
+  <div id="question7" style="display:none">
+	  <h2> 더 선호하는 자동차 스타일 </h2>
+	  <input type="button" onClick="goNext(7, 1);" value="SUV" class="btn-search"/>
+	  <input type="button" onClick="goNext(7, 0);" value="승용차" class="btn-search"/>
+	  <h3>(7/10)</h3>
+  </div>
+  <div id="question8" style="display:none">
+	  <h2> 술자리에서 모르는 사람과 시비붙어 본 적 있다. </h2>
+	  <input type="button" onClick="goNext(8, 1);" value="있다" class="btn-search"/>
+	  <input type="button" onClick="goNext(8, 0);" value="없다" class="btn-search"/>
+	  <h3>(8/10)</h3>
+  </div>
+  <div id="question9" style="display:none">
+	  <h2> 밥먹고 양치는 언제? </h2>
+	  <input type="button" onClick="goNext(9, 1);" value="미루고 미루다가 늦거나 까먹는다" class="btn-search"/>
+	  <input type="button" onClick="goNext(9, 0);" value="바로 한다" class="btn-search"/>
+	  <h3>(9/10)</h3>
+  </div>
+  <div id="question10" style="display:none">
+	  <h2> 더 자신있는 종목은? </h2>
+	  <input type="button" onClick="goNext(10, 1);" value="팔굽혀펴기(윗몸일으키기)" class="btn-search"/>
+	  <input type="button" onClick="goNext(10, 0);" value="오래 달리기" class="btn-search"/>
+	  <h3>(10/10)</h3>
   </div>
   <input type="text" id="total" value="0"/>
+  <input type="text" id="gender" value/>
 </div>
 </body>
-</html>
 </html>
