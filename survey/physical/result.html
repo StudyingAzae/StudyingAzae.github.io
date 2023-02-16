@@ -11,8 +11,11 @@
 
 <script language="javascript">
 $(function(){
-	console.log("tot result: " + localStorage.getItem("totScore"));
-	$("#resultImg").attr("src", "/image/coupang.png");
+	if ( localStorage.getItem("gender") == "1"){
+		$("#resultImg").attr("src", "/image/survey/physical/man_8.jpg");
+	}else{
+		$("#resultImg").attr("src", "/image/survey/physical/girl_10.jpg");
+	}
 });  
   	
 function goNext () {
@@ -32,8 +35,6 @@ function goNext () {
   <div><img id="resultImg" class="survey_result_img"></div>
   
   <input type="button" onClick="goNext();" value="처음으로" class="btn-search"/>
-  
-  <div><h3>(1/10)</h3></div>
 </div>
 </body>
 </html>
