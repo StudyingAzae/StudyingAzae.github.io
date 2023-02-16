@@ -16,6 +16,8 @@ $(function(){
 });  
   	
 function goNext (score) {
+	let totScore = score;
+	localStorage.setItem("totScore", totScore);
 	location.href = "/question2";
 }
 	
@@ -32,8 +34,7 @@ function goNext (score) {
   <input type="button" onClick="goNext(1);" value="남" class="btn-search"/>
   <input type="button" onClick="goNext(0);" value="녀" class="btn-search"/>
   
-  <div id="bcTarget" class="barcodeImg"></div>  
-  
+  <div><h2>(1/10)</h2></div>
 </div>
 </body>
 </html>
