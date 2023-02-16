@@ -16,9 +16,10 @@ $(function(){
 });  
   	
 function goNext (score) {
-  console.log (localStorage.getItem("totScore"));
-	let totScore = localStorage.getItem("totScore") + score;
+  console.log ("11 : " + localStorage.getItem("totScore"));
+	let totScore = parseInt(localStorage.getItem("totScore")) + parseInt(score);
 	localStorage.setItem("totScore", totScore);
+  console.log ("22 : " + localStorage.getItem("totScore"));
 	location.href = "/question3";
 }
 	
