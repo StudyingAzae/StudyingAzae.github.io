@@ -20,6 +20,8 @@ body {
   width: auto;
 }
 .wrapper h {font-size:2rem; color:black;}
+.wrapper h2 {font-size:1.4rem; color:black;}
+.wrapper h3 {font-size:1.4rem; color:black;}
 
 .content {
   width: auto;	
