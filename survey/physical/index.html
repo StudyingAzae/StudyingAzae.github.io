@@ -13,8 +13,8 @@
 <script language="javascript">
 $(function(){
 	localStorage.clear();
-	/*
-	0. 여? 남?
+/*
+0. 여? 남?
 1. 있다 없다
 2. 만족 불만족
 3. 친구가 일진한테 삥뜯, 맞는중, 바로? 선생님?
@@ -29,9 +29,15 @@ $(function(){
 });  
   	
 function goNext (score) {
-	let totScore = parseInt(score);
-	localStorage.setItem("totScore", totScore);
-	location.href = "./question2.html";
+	console.log( "total : " + $("#total").val() );
+	let totalScore = parseInt($("#total").val()) + parseInt(score);
+	
+	$("#total").val(totalScore);
+	console.log( "total2 : " + $("#total").val() );
+	
+	//localStorage.setItem("totScore", totScore);
+	//location.href = "./question2.html";
+	$("#question").text("질문바꾸기");
 }
 	
 
@@ -42,12 +48,13 @@ function goNext (score) {
 <div class="wrapper">
   <div><h> 피지컬 테스트 </h></div>
   
-  <div><h2> 성별 </h2></div>
+  <div><h2 id="question"> 성별 </h2></div>
   
   <input type="button" onClick="goNext(1);" value="남자" class="btn-search"/>
   <input type="button" onClick="goNext(0);" value="여자" class="btn-search"/>
   
   <div><h3>(1/10)</h3></div>
+  <input type="text" id="total" value="0"/>
 </div>
 </body>
 </html>
