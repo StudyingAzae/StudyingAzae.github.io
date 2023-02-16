@@ -28,7 +28,7 @@ $(function(){
 	
 });  
   	
-function goNext (score) {
+function goNext (idx, score) {
 	console.log( "total : " + $("#total").val() );
 	let totalScore = parseInt($("#total").val()) + parseInt(score);
 	
@@ -37,7 +37,10 @@ function goNext (score) {
 	
 	//localStorage.setItem("totScore", totScore);
 	//location.href = "./question2.html";
-	$("#question").text("질문바꾸기");
+	if (idx < 10){
+		$("#question" + idx).hide();
+		$("#question" + (parseInt(idx)+1)).show();
+	}
 }
 	
 
@@ -47,13 +50,18 @@ function goNext (score) {
 <body>
 <div class="wrapper">
   <div><h> 피지컬 테스트 </h></div>
-  
-  <div><h2 id="question"> 성별 </h2></div>
-  
-  <input type="button" onClick="goNext(1);" value="남자" class="btn-search"/>
-  <input type="button" onClick="goNext(0);" value="여자" class="btn-search"/>
-  
-  <div><h3>(1/10)</h3></div>
+  <div id="question1">
+	  <div><h2> 성별 </h2></div>
+	  <input type="button" onClick="goNext(1, 1);" value="남자" class="btn-search"/>
+	  <input type="button" onClick="goNext(1, 0);" value="여자" class="btn-search"/>
+	  <div><h3>(1/10)</h3></div>
+  </div>
+  <div id="question2">
+	  <div><h2> 운동한적 있다 없다 </h2></div>
+	  <input type="button" onClick="goNext(2, 1);" value="있다" class="btn-search"/>
+	  <input type="button" onClick="goNext(2, 0);" value="없다" class="btn-search"/>
+	  <div><h3>(2/10)</h3></div>
+  </div>
   <input type="text" id="total" value="0"/>
 </div>
 </body>
