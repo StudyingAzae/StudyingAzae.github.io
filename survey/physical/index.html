@@ -22,24 +22,18 @@ let goNext = (idx, score) => {
 		$("#total").val(parseInt($("#total").val()) + parseInt(score));
 	}
 	
-	if (idx < 10){
+	if (idx < 11){
 		$("#question" + idx).hide();
 		$("#question" + (parseInt(idx)+1)).show();
-	}else if(idx == 10){
-		swal({  title : "테스트를 마쳤습니다."
-		      , icon  : "success"
-		      , closeOnClickOutside : false
-		     }, function(){
-			localStorage.setItem("gender", $("#gender").val());
-			localStorage.setItem("totScore", $("#total").val());
-			location.href = "./result.html";	
-		});
+	}else if(idx == 11){
+		localStorage.setItem("gender", $("#gender").val());
+		localStorage.setItem("totScore", $("#total").val());
+		location.href = "./result.html";	
 	}else{
 		swal("error", "error", "info");
 		location.href = "./index.html";	
 	}
 }
-	
 
 </script>
 <title>TITLE</title>
@@ -106,6 +100,10 @@ let goNext = (idx, score) => {
 	  <input type="button" onClick="goNext(10, 1);" value="팔굽혀펴기(윗몸일으키기)" class="btn-search"/>
 	  <input type="button" onClick="goNext(10, 0);" value="오래 달리기" class="btn-search"/>
 	  <h3>(10/10)</h3>
+  </div>
+  <div id="question11" style="display:none">
+	  <h2> 테스트를 마쳤습니다. </h2>
+	  <input type="button" onClick="goNext(11, 0);" value="결과보러가기" class="btn-search"/>
   </div>
   <input type="hidden" id="total" value="0"/>
   <input type="hidden" id="gender" value/>
