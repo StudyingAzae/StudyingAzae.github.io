@@ -12,6 +12,7 @@
 
 <script language="javascript">
 $(function(){
+	localStorage.clear();
 });  
   	
 let goNext = (idx, score) => {
@@ -26,6 +27,7 @@ let goNext = (idx, score) => {
 		$("#question" + (parseInt(idx)+1)).show();
 	}else if(idx == 10){
 		swal("테스트를 마쳤습니다.", "결과보러가기", "success");
+		localStorage.setItem("totScore", $("#total").val());
 		location.href = "./result.html";	
 	}else{
 		swal("error", "error", "info");
