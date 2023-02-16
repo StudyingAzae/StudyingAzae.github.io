@@ -19,6 +19,7 @@ body {
   display: inline-block; 
   width: auto;
 }
+.wrapper h {font-size:2rem; color:black;}
 
 .content {
   width: auto;	
