@@ -5,6 +5,7 @@
 
 html {
   font-family: "Malgun Gothic";
+  font-size: 10px;
 }
 
 body {
@@ -89,10 +90,9 @@ body {
 
 /* INPUT */
 .input-search{
-  width: 300px;
-  padding: 7px;
-  margin-bottom: 20px;
-  font-size: 14px;
+  width: 30%;
+  margin-bottom: 3%;
+  font-size: 1.4rem;
   text-align: left;
   border-radius: 1000px;
   box-sizing: border-box;
