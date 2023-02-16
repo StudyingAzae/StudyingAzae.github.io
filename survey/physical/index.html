@@ -18,7 +18,7 @@ $(function(){
 function goNext (score) {
 	let totScore = score;
 	localStorage.setItem("totScore", totScore);
-	location.href = "/question2";
+	location.href = "/question2.html";
 }
 	
 
@@ -31,10 +31,10 @@ function goNext (score) {
   
   <div><h2> 성별 </h2></div>
   
-  <input type="button" onClick="goNext(1);" value="남" class="btn-search"/>
-  <input type="button" onClick="goNext(0);" value="녀" class="btn-search"/>
+  <input type="button" onClick="goNext(1);" value="남자" class="btn-search"/>
+  <input type="button" onClick="goNext(0);" value="여자" class="btn-search"/>
   
-  <div><h2>(1/10)</h2></div>
+  <div><h3>(1/10)</h3></div>
 </div>
 </body>
 </html>
