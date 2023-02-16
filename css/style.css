@@ -154,7 +154,7 @@ word-wrap: break-word;
 text-align: center;
 }
 
-.survey_result_img{width:50%; height:50%}
+.survey_result_img{width:50%; height:50%; margin-bottom:5%;}
 
 
 // 모바일
