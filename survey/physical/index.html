@@ -26,7 +26,7 @@ let goNext = (idx, score) => {
 		$("#question" + idx).hide();
 		$("#question" + (parseInt(idx)+1)).show();
 	}else if(idx == 10){
-		swal({"테스트를 마쳤습니다.", "결과보러가기", "success"}).then(function(){
+		swal({"테스트를 마쳤습니다.", "결과보러가기", "success"}, function(){
 			localStorage.setItem("gender", $("#gender").val());
 			localStorage.setItem("totScore", $("#total").val());
 			location.href = "./result.html";	
