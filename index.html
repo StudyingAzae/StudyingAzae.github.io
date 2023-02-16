@@ -7,14 +7,20 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <script language="javascript">
   function goUrl (url) {
-	  location.href = "/blog/" + url;
+	  location.href = url;
   }
 </script>
 </head>
 <body>
-<div class="wrapper">
+
+<ins class="kakao_ad_area" style="display:none;"
+data-ad-unit = "DAN-yDHYoJx8ca07BtWl"
+data-ad-width = "320"
+data-ad-height = "100"></ins>
+<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3633437332762260"
-     crossorigin="anonymous"></script>
+crossorigin="anonymous"></script>
+<div class="wrapper">
 <!-- git -->
 <ins class="adsbygoogle"
      style="display:block"
@@ -27,12 +33,12 @@
 </script>
   <h>HELLO WORLD</h>
 	<br></br>
-  <input type="button" onClick="goUrl('barcode');" value="바코드 생성" class="btn-search"/>
-  <input type="button" onClick="goUrl('QRcode');" value="QR 생성" class="btn-search"/>
-  <input type="button" onClick="goUrl('addrSearch');" value="주소 검색" class="btn-search"/>
-  <input type="button" onClick="goUrl('kakaoMap');" value="카카오맵" class="btn-search"/>
-  <input type="button" onClick="goUrl('kkoShare');" value="카카오 공유" class="btn-search"/>
-  <input type="button" onClick="goUrl('shortUrl');" value="short URL" class="btn-search"/>
+  <input type="button" onClick="goUrl('/blog/barcode');" value="바코드 생성" class="btn-search"/>
+  <input type="button" onClick="goUrl('/blog/QRcode');" value="QR 생성" class="btn-search"/>
+  <input type="button" onClick="goUrl('/blog/addrSearch');" value="주소 검색" class="btn-search"/>
+  <input type="button" onClick="goUrl('/blog/kakaoMap');" value="카카오맵" class="btn-search"/>
+  <input type="button" onClick="goUrl('/blog/kkoShare');" value="카카오 공유" class="btn-search"/>
+  <input type="button" onClick="goUrl('/survey/physical');" value="피지컬 설문" class="btn-search"/>
 </div>
 </body>
 </html>
