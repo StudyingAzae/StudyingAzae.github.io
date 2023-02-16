@@ -13,8 +13,10 @@
 $(function(){
 	if ( localStorage.getItem("gender") == "1"){
 		$("#resultImg").attr("src", "/image/survey/physical/man_8.jpg");
+		$("#resultStr").text("당신의 피지컬은 '김강민'입니다.");
 	}else{
 		$("#resultImg").attr("src", "/image/survey/physical/girl_10.jpg");
+		$("#resultStr").text("당신의 피지컬은 '춘리'입니다.");
 	}
 });  
   	
@@ -33,6 +35,8 @@ function goNext () {
   <div><h2> 결과는 </h2></div>
 	
   <div><img id="resultImg" class="survey_result_img"></div>
+	
+  <div><h3 id="resultStr"></h3></div>
   
   <input type="button" onClick="goNext();" value="처음으로" class="btn-search"/>
 </div>
