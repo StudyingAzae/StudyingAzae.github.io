@@ -89,7 +89,7 @@ body {
 
 /* INPUT */
 .input-search{
-  width: 50%;
+  width: 80%;
   margin-bottom: 3%;
   font-size: 1.5rem;
   text-align: left;
@@ -97,10 +97,6 @@ body {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-}
-
-.input-search:hover, input:focus{
-  background:#ffffff;
 }
 
 .list-search {
@@ -145,23 +141,18 @@ padding: 10px;
 padding-bottom: 0;
 }
 
-#output div {
-padding-bottom: 10px;
-word-wrap: break-word;
-}
+#output div { padding-bottom: 10px; word-wrap: break-word; }
 
-#noQRFound {
-text-align: center;
-}
+#noQRFound { text-align: center; }
 
-.survey_result_img{width:70%; height:70%; margin-bottom:5%;}
+.survey_result_img{ width:70%; height:70%; margin-bottom:5%; }
 
 /* top menu */
 .top-menu .btn-move {
     border: none;
     margin-bottom: 10px;
-    min-width: 40%;
-    min-height: 10%;
+    min-width: 50%;
+    min-height: 30%;
     background: gray;
     color: white;
     cursor: pointer;
