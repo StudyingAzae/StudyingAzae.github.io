@@ -27,6 +27,7 @@ let goNext = (idx, score) => {
 	}
 	
 	if (idx < 11){
+		localStorage.setItem("qestion"+idx, score);
 		$("#question" + idx).hide();
 		$("#question" + (parseInt(idx)+1)).show();
 	}else if(idx == 11){
