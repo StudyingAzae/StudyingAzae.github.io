@@ -155,6 +155,20 @@ text-align: center;
 
 .survey_result_img{width:70%; height:70%; margin-bottom:5%;}
 
+/* 애니메이션 */
+.top-menu .btn-move {
+    position: relative;
+    border: none;
+    margin-bottom: 10px;
+    min-width: 200px;
+    min-height: 50px;
+    background: gray;
+    color: darkslategray;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.top-menu .active{ background: red; }
 
 // 모바일
 @media ( max-width: 767px ){
