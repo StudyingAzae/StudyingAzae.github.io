@@ -47,6 +47,10 @@ function goBarCode () {
 <title>QR code gen</title>
 </head>
 <body>
+<div class="top-menu">
+	<input type="button" onClick="goBarCode();" value="바코드" class="btn-move"/>
+	<input type="button" value="QR" class="btn-move active"/>
+</div>
 <div class="wrapper">
   <div><h> QR코드 생성하기 </h></div>
   <select id="type" class="front-selectbox" >
@@ -57,7 +61,6 @@ function goBarCode () {
     <input type="text" name="keyword" id="keyword" value="" class="input-search" placeholder="ex) 생성하려는 QR코드 내용을 입력하세요."/>
     <input type="button" onClick="makeQRcode();" value="QR코드 생성" class="btn-search"/>
   </div>
-  <input type="button" onClick="goBarCode();" value="이동" class="btn-search"/>
   
  <div id="qrcode" class="barcodeImg"></div>
   
