@@ -136,17 +136,8 @@ padding-bottom: 0;
 .survey_result_img{ width:70%; height:70%; margin-bottom:5%; }
 
 /* top menu */
-.top-menu .btn-move {
-    border: none;
-    margin-bottom: 10px;
-    width: 40%;
-    height: 40%;
-    background: gray;
-    color: white;
-    cursor: pointer;
-    font-weight: 700;
-}
-
+.top-menu {background:#000099;}
+.top-menu .btn-move { border: none; margin-bottom: 10px; width: 40%; height: 40%; background: gray; color: white; cursor: pointer; font-weight: 700; }
 .top-menu .active{ background: red; }
 
 // 모바일
