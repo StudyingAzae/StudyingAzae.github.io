@@ -10,30 +10,13 @@ body { text-align: center; background: white; }
 .wrapper h2 { font-size:1.6rem; color:black; }
 .wrapper h3 { font-size:1.4rem; color:black; }
 
-.content {
-  width: auto;	
-  height: 500px;
-  margin: 10px;
-}
+.content { width:auto; height:500px; margin:10px; }
 
 /* 테이블 */
-.basic-table {
-  border-collapse: collapse;
-  border: 2px solid;
-}
-
-.basic-table th, td {
-  padding: 10px 5px;
-  border: 1px solid;
-}
-
-.basic-table th {
-  font-size: 1.4rem;
-  background-color: teal; color:white;
-}
-.basic-table td {
-  font-size: 1.3rem;
-}
+.basic-table { border-collapse: collapse; border: 2px solid; }
+.basic-table th, td { padding: 10px 5px; border: 1px solid; }
+.basic-table th { font-size: 1.4rem; background-color: teal; color:white; }
+.basic-table td { font-size: 1.3rem; }
 
 /* 버튼 */
 .btn-kko {
@@ -76,59 +59,19 @@ body { text-align: center; background: white; }
 }
 
 /* INPUT */
-.input-search{
-  width: 80%;
-  margin-bottom: 3%;
-  font-size: 1.3rem;
-  text-align: left;
-  border-radius: 1000px;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-}
+.input-search{ width: 80%; margin-bottom: 3%; font-size: 1.3rem; text-align: left; border-radius: 1000px; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+.list-search { margin-top: 20px; }
+.front-selectbox{ text-align:center; font-size: 1.5rem; margin: 10px; }
 
-.list-search {
-  margin-top: 20px; 
-}
+.barcodeImg { margin:50px auto; }
 
-.front-selectbox{
-  text-align:center;
-  font-size: 1.5rem;
-  margin: 10px;
-}
+#githubLink { position: absolute; right: 0; top: 12px; color: #2D99FF; }
 
-.barcodeImg {
-  margin:50px auto; 
-}
-#githubLink {
-position: absolute;
-right: 0;
-top: 12px;
-color: #2D99FF;
-}
+h1 { margin: 10px 0; font-size: 40px; }
 
-h1 {
-margin: 10px 0;
-font-size: 40px;
-}
-
-#loadingMessage {
-text-align: center;
-padding: 40px;
-background-color: #eee;
-}
-
-#canvas {
-width: 100%;
-}
-
-#output {
-margin-top: 20px;
-background: #eee;
-padding: 10px;
-padding-bottom: 0;
-}
-
+#loadingMessage { text-align: center;  padding: 40px; background-color: #eee; }
+#canvas { width: 100%; }
+#output { margin-top: 20px; background: #eee; padding: 10px; padding-bottom: 0; }
 #output div { padding-bottom: 10px; word-wrap: break-word; }
 
 #noQRFound { text-align: center; }
@@ -136,7 +79,7 @@ padding-bottom: 0;
 .survey_result_img{ width:70%; height:70%; margin-bottom:5%; }
 
 /* top menu */
-.top-menu {background:#000099;}
-.top-menu .btn-move { border: none; margin-top: 10px; margin-bottom: 10px; width: 40%; height: 35px; background: gray; color: white; cursor: pointer; font-weight: 700; }
+.top-menu { background:#000099; margin-bottom:2rem; }
+.top-menu .btn-move { border:none; margin-top:10px; margin-bottom:10px; width: 40%; height: 35px; background: gray; color: white; cursor: pointer; font-weight: 700; }
 .top-menu .active{ background: red; }
 
