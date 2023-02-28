@@ -3,7 +3,7 @@
 
 html { font-family: "Malgun Gothic"; font-size: 10px; }
 
-body { width: 100%; text-align: center; background: white; }
+body { text-align: center; background: white; }
 
 .wrapper { display: inline-block; width: auto; }
 .wrapper h { font-size:2.5rem; color:black; }
