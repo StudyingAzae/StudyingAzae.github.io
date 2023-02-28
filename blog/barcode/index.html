@@ -20,7 +20,7 @@ $(function(){
 });  
   
 function makeBarcode() {
-    let keyword = document.form.keyword.value;
+    let keyword = $('#keyword').val();
     let type = $('#type option:selected').val();
   
     if (keyword == null || keyword == ""){
