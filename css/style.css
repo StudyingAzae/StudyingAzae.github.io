@@ -137,7 +137,7 @@ padding-bottom: 0;
 
 /* top menu */
 .top-menu {background:#000099;}
-.top-menu .btn-move { border: none; margin-bottom: 10px; width: 40%; height: 40%; background: gray; color: white; cursor: pointer; font-weight: 700; }
+.top-menu .btn-move { border: none; margin-top: 10px; margin-bottom: 10px; width: 40%; height: 40%; background: gray; color: white; cursor: pointer; font-weight: 700; }
 .top-menu .active{ background: red; }
 
 // 모바일
