@@ -59,7 +59,7 @@ body { text-align: center; background: white; }
 }
 
 /* INPUT */
-.input-search{ width: 80%; margin-bottom: 3%; font-size: 1.5rem; text-align: left; border-radius: 100rem; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
+.input-search{ width:80%; height:3rem; margin-bottom: 3%; font-size: 1.5rem; text-align: left; border-radius: 100rem; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; }
 .list-search { margin-top: 2rem; }
 .front-selectbox{ text-align:center; font-size: 1.5rem; margin: 1rem; }
 
