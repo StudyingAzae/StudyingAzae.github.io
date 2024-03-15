@@ -59,11 +59,38 @@ function coupangShare() {
 		],
 	});
 }
+
+function soyulShare() {
+	var albumUrl = "https://studyingazae.github.io/react/build/";
+	Kakao.Link.sendDefault({
+	  objectType: 'feed',
+	  content:{
+		  title: '소율몬 육아앨범',
+		  description : '소율몬 사진보러 오세요.',
+		  imageUrl:
+		  'https://StudyingAzae.github.io/image/coupang.png',	
+		  link: {
+		    mobileWebUrl: albumUrl,
+		    webUrl: albumUrl,
+		  },
+	  },
+	buttons: [ 
+	{
+	  title: '앨범보러 가기',
+	  link: {
+	    mobileWebUrl: albumUrl,
+	    webUrl: albumUrl,
+	  },
+	},
+		],
+	});
+}
 </script>
 <title>카카오톡 공유하기 버튼</title>
 </head>
 <body>
 <div class="wrapper">
+<input type="button" onClick="soyulShare();" value="소율몬 앨범 공유" class="btn-kko"/>
 <input type="button" onClick="blogShare();" value="블로그 공유" class="btn-kko"/>
 <input type="button" onClick="coupangShare();" value="쿠파스 공유" class="btn-kko"/>
 <ul id="friend-list"></ul>
