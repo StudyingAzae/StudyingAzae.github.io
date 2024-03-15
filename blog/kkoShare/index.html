@@ -85,6 +85,32 @@ function soyulShare() {
 		],
 	});
 }
+
+function placeShare() {
+	var placeUrl = "https://map.naver.com/p/search/%EA%B7%B8%EB%A6%B41492/place/37351404?placePath=?entry=pll&from=nx&fromNxList=true&searchType=place";
+	Kakao.Link.sendDefault({
+	  objectType: 'feed',
+          content:{
+		  title: '흐드스 모임 공지',
+		  description : '돼지 잡으러 가볼까? 장소 확정?',
+		  imageUrl:
+		  'https://StudyingAzae.github.io/image/soyul_3.jpg',	
+		  link: {
+		    mobileWebUrl: placeUrl,
+		    webUrl: placeUrl,
+		  },
+	  },
+	buttons: [ 
+        {
+          title: '장소 보러 가기',
+          link: {
+            mobileWebUrl: placeUrl,
+            webUrl: placeUrl,
+          },
+        },
+		],
+	});
+}
 </script>
 <title>카카오톡 공유하기 버튼</title>
 </head>
@@ -93,6 +119,7 @@ function soyulShare() {
 <input type="button" onClick="soyulShare();" value="소율몬 앨범 공유" class="btn-kko"/>
 <input type="button" onClick="blogShare();" value="블로그 공유" class="btn-kko"/>
 <input type="button" onClick="coupangShare();" value="쿠파스 공유" class="btn-kko"/>
+<input type="button" onClick="placeShare();" value="장소 공유" class="btn-kko"/>
 <ul id="friend-list"></ul>
 </div>
 </body>
